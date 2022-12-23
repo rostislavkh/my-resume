@@ -28,6 +28,9 @@ mix.js('resources/js/default.js', 'js');
 
 // default
 mix.sass('resources/scss/style.scss', 'css');
+mix.sass('resources/scss/fonts.scss', 'css');
+mix.sass('resources/scss/variables.scss', 'css');
+mix.sass('resources/scss/pages/home.scss', 'css');
 
 // lib
 // mix.styles([
@@ -36,10 +39,6 @@ mix.sass('resources/scss/style.scss', 'css');
 
 // pages
 // mix.css('resources/css/pages/index-lc.css', 'css');
-
-//========================================================= SASS file ===========================================================
-// mix.sass('resources/scss/app.scss', 'css');
-// mix.js('resources/js/dashboard.js', 'public/js')
 
 mix.setPublicPath('public')
 mix.version();
