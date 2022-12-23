@@ -24,6 +24,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/scss/app-layout.scss":
+/*!****************************************!*\
+  !*** ./resources/scss/app-layout.scss ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/scss/fonts.scss":
 /*!***********************************!*\
   !*** ./resources/scss/fonts.scss ***!
@@ -54,9 +67,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./resources/scss/pages/home.scss ***!
   \****************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n  ╷\n1 │ @import 'variables.scss';\n  │         ^^^^^^^^^^^^^^^^\n  ╵\n  resources\\scss\\pages\\home.scss 1:9  root stylesheet\n    at processResult (C:\\xampp\\htdocs\\my-resume\\node_modules\\webpack\\lib\\NormalModule.js:758:19)\n    at C:\\xampp\\htdocs\\my-resume\\node_modules\\webpack\\lib\\NormalModule.js:860:5\n    at C:\\xampp\\htdocs\\my-resume\\node_modules\\loader-runner\\lib\\LoaderRunner.js:400:11\n    at C:\\xampp\\htdocs\\my-resume\\node_modules\\loader-runner\\lib\\LoaderRunner.js:252:18\n    at context.callback (C:\\xampp\\htdocs\\my-resume\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at C:\\xampp\\htdocs\\my-resume\\node_modules\\sass-loader\\dist\\index.js:54:7\n    at Function.call$2 (C:\\xampp\\htdocs\\my-resume\\node_modules\\sass\\sass.dart.js:101511:16)\n    at render_closure1.call$2 (C:\\xampp\\htdocs\\my-resume\\node_modules\\sass\\sass.dart.js:86499:12)\n    at _RootZone.runBinary$3$3 (C:\\xampp\\htdocs\\my-resume\\node_modules\\sass\\sass.dart.js:30152:18)\n    at _FutureListener.handleError$1 (C:\\xampp\\htdocs\\my-resume\\node_modules\\sass\\sass.dart.js:28681:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ })
 
@@ -147,8 +163,10 @@ throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugi
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/default": 0,
+/******/ 			"css/home": 0,
 /******/ 			"css/variables": 0,
 /******/ 			"css/fonts": 0,
+/******/ 			"css/app-layout": 0,
 /******/ 			"css/style": 0
 /******/ 		};
 /******/ 		
@@ -199,11 +217,12 @@ throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugi
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/variables","css/fonts","css/style"], () => (__webpack_require__("./resources/js/default.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/variables","css/fonts","css/style"], () => (__webpack_require__("./resources/scss/style.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/variables","css/fonts","css/style"], () => (__webpack_require__("./resources/scss/fonts.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/variables","css/fonts","css/style"], () => (__webpack_require__("./resources/scss/variables.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/variables","css/fonts","css/style"], () => (__webpack_require__("./resources/scss/pages/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/js/default.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/app-layout.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/fonts.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/variables.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/pages/home.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -1,6 +1,18 @@
-// @font-face {
-//     font-family: 'Raleway';
-//     src: url('/public/fonts/Raleway-VariableFont_wght.ttf');
-//     font-style: normal;
-//     font-weight: normal;
-// }
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/public/fonts/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('/public/fonts/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('/public/fonts/Inter-SemiBold.ttf');
+    font-style: normal;
+    font-weight: 600;
+}

@@ -15,6 +15,7 @@
     <!-- Styles -->
     {{-- <link href="{{ asset('/css/all-lib.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app-layout.css') }}" rel="stylesheet">
     @yield('style')
 </head>
 

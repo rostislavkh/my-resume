@@ -1,6 +1,8 @@
 {
-    "/js/default.js": "/js/default.js?id=bb387f96a9d70133df33410d17056ce6",
-    "/css/variables.css": "/css/variables.css?id=68b329da9893e34099c7d8ad5cb9c940",
-    "/css/fonts.css": "/css/fonts.css?id=68b329da9893e34099c7d8ad5cb9c940",
-    "/css/style.css": "/css/style.css?id=03fa7ff73fb94c5f1a38092bfda58d3e"
+    "/js/default.js": "/js/default.js?id=edf1e25187179dc02bde5e44006318cd",
+    "/css/variables.css": "/css/variables.css?id=1868471ff19b51fc28c11e3922820e8f",
+    "/css/fonts.css": "/css/fonts.css?id=1868471ff19b51fc28c11e3922820e8f",
+    "/css/app-layout.css": "/css/app-layout.css?id=68b329da9893e34099c7d8ad5cb9c940",
+    "/css/style.css": "/css/style.css?id=03fa7ff73fb94c5f1a38092bfda58d3e",
+    "/css/home.css": "/css/home.css?id=1868471ff19b51fc28c11e3922820e8f"
 }

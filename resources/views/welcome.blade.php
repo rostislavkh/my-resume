@@ -3,7 +3,7 @@
 @section('title', __('Resume by Rostislav Khorolskiy'))
 
 @section('style')
-    <link href="{{ mix('/css/page-home.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/home.css') }}" rel="stylesheet">
 @endsection
 
 @section('content')
