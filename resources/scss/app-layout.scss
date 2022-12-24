@@ -1,0 +1,107 @@
+@import 'variables.scss';
+
+body {
+    background-color: $body-bg;
+}
+
+header {
+    box-shadow: $header-shadow;
+    background-color: $milk;
+    width: 100%;
+    height: 67px;
+}
+
+.desctop-header {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.desctop-header li a, .curr-lang {
+    color: $text-color;
+    font-family: $Ir;
+
+    &:hover {
+        color: $title-color;
+    }
+}
+
+.drop-list--lang {
+    background-color: $milk!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    box-shadow: $header-shadow;
+}
+
+.drop-arrow {
+    border-bottom-color: $milk!important;
+}
+
+.desctop-header li a, .link-lang {
+    position: relative;
+    transition: .3s;
+
+    &::after {
+        position: absolute;
+        content: "";
+        background-color: $text-color;
+        box-shadow: $link-shadow;
+        width: 0;
+        height: 4px;
+        border-radius: 2px;
+        bottom: -7px;
+        left: 0;
+    }
+
+    &:hover {
+        &::after {
+            transition: .3s;
+            width: 100%;
+        }
+    }
+}
+
+.link-lang {
+    color: $text-color!important;
+    font-size: $text-size!important;
+    transition: .3s;
+
+    &:hover {
+        color: $title-color!important;
+        transition: .3s;
+    }
+}
+
+.curr-lang {
+    display: flex;
+
+    &::after {
+        transition: .3s;
+        display: block;
+        margin-left: 6px;
+        content: url('/img/arrow.svg');
+    }
+}
+
+.curr-lang:hover, .drop:not(.is-disabled):hover {
+    transition: .3s;
+    .curr-lang::after {
+        opacity: 0;
+    }
+}
+
+
+
+
+@media screen and (max-width: 425px) {
+    .desctop-header {
+        display: none;
+    }
+}

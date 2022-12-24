@@ -2,13 +2,10 @@
 
 // colors
 
-$dark: #000000;
-$black: #4D4D4D;
-$yellow: #FCEE21;
-$blue: #0071BC;
-$red: #ff0000;
-$dark-red: #8f0000;
-$white: #ffffff;
+$milk: #FBFBFB;
+$text-color: #7B7B7B;
+$title-color: #4B4B4B;
+$body-bg: #F4FAFD;
 
 // fonts
 
@@ -18,15 +15,9 @@ $Isb: 'Inter-SemiBold';
 
 // font size
 
-$very-low: 13px;
-$low: 15px;
-$medium: 17px;
+$sub-subtitle-size: 20px;
+$text-size: 16px;
 
-$low-high: 19px;
-$high-mobile: 22px;
-$high: 22px;
-$high-xxl: 26px;
-
-$extra-size-low: 32px;
-$extra-size-mobile: 34px;
-$extra-size: 52px;
+// shadows
+$header-shadow: 0px 4px 12px 6px #E8EEF1;
+$link-shadow: 0px 2px 4px 0px #00000040;

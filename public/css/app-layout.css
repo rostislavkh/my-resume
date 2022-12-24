@@ -1,1 +1,113 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("/fonts/Inter-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("/fonts/Inter-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("/fonts/Inter-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+}
+body {
+  background-color: #F4FAFD;
+}
 
+header {
+  box-shadow: 0px 4px 12px 6px #E8EEF1;
+  background-color: #FBFBFB;
+  width: 100%;
+  height: 67px;
+}
+
+.desctop-header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.desctop-header li a, .curr-lang {
+  color: #7B7B7B;
+  font-family: "Inter-Regular";
+}
+.desctop-header li a:hover, .curr-lang:hover {
+  color: #4B4B4B;
+}
+
+.drop-list--lang {
+  background-color: #FBFBFB !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  box-shadow: 0px 4px 12px 6px #E8EEF1;
+}
+
+.drop-arrow {
+  border-bottom-color: #FBFBFB !important;
+}
+
+.desctop-header li a, .link-lang {
+  position: relative;
+  transition: 0.3s;
+}
+.desctop-header li a::after, .link-lang::after {
+  position: absolute;
+  content: "";
+  background-color: #7B7B7B;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+  bottom: -7px;
+  left: 0;
+}
+.desctop-header li a:hover::after, .link-lang:hover::after {
+  transition: 0.3s;
+  width: 100%;
+}
+
+.link-lang {
+  color: #7B7B7B !important;
+  font-size: 16px !important;
+  transition: 0.3s;
+}
+.link-lang:hover {
+  color: #4B4B4B !important;
+  transition: 0.3s;
+}
+
+.curr-lang {
+  display: flex;
+}
+.curr-lang::after {
+  transition: 0.3s;
+  display: block;
+  margin-left: 6px;
+  content: url("/img/arrow.svg");
+}
+
+.curr-lang:hover, .drop:not(.is-disabled):hover {
+  transition: 0.3s;
+}
+.curr-lang:hover .curr-lang::after, .drop:not(.is-disabled):hover .curr-lang::after {
+  opacity: 0;
+}
+
+@media screen and (max-width: 425px) {
+  .desctop-header {
+    display: none;
+  }
+}
