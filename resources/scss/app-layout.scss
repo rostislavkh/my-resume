@@ -2,13 +2,19 @@
 
 body {
     background-color: $body-bg;
+    padding-top: 67px;
 }
+
+// ============================================== Header =============================================
 
 header {
     box-shadow: $header-shadow;
     background-color: $milk;
     width: 100%;
     height: 67px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .desctop-header {
@@ -71,6 +77,7 @@ header {
 .link-lang {
     color: $text-color!important;
     font-size: $text-size!important;
+    font-family: $Ir;
     transition: .3s;
 
     &:hover {
@@ -100,7 +107,99 @@ header {
 
 
 
+
+
+// ============================================== Mobile header =============================================
+
+.mobile-header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    width: 100%;
+    height: 100%;
+
+    &__title {
+        font-family: $Ir;
+        color: $text-color;
+        font-size: $text-size;
+    }
+
+    &__right-block {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__burger {
+        width: 30px;
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+
+        & span {
+            height: 2px;
+            width: 30px;
+            background: $text-color;
+            border-radius: 4px;
+
+            &:nth-child(1) {
+                transition: .3s;
+            }
+            &:nth-child(3) {
+                transition: .3s;
+            }
+        }
+    }
+
+    .active {
+        gap: 0;
+        position: relative;
+
+        & span {
+            position: absolute;
+
+            &:nth-child(1) {
+                transition: .3s;
+                rotate: 45deg;
+            }
+            &:nth-child(2) {
+                visibility: hidden;
+            }
+            &:nth-child(3) {
+                transition: .3s;
+                rotate: -45deg;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+// ============================================== Media =============================================
+
+@media screen and (min-width: 425px) {
+    .mobile-header {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 425px) {
+    header {
+        height: 50px;
+    }
+
+    body {
+        padding-top: 50px;
+    }
+
     .desctop-header {
         display: none;
     }

@@ -41,9 +41,33 @@
                 </div>
             </li>
         </ul>
+        <div class="mobile-header">
+            <span class="mobile-header__title">Rostislav Khorolskiy</span>
+            <div class="mobile-header__right-block">
+                <div class="mobile-header__lang">
+                    <div class="drop -color-lighter drop--down">
+                    <div class="curr-lang">EN</div>
+
+                    <div class="drop__content -transition-slide-in">
+                        <div class="drop-arrow"></div>
+
+                        <div class="drop-list drop-list--lang -size-low -position-center -border-rounded">
+                            <a class="link-lang" href="#">EN</a>
+                            <a class="link-lang" href="#">UA</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="mobile-header__burger active" type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header> 
 
-    <main class="bg-site">
+    <main>
         @yield('content')
     </main>
 
