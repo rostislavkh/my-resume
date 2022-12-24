@@ -8,13 +8,17 @@ body {
 // ============================================== Header =============================================
 
 header {
-    box-shadow: $header-shadow;
+    position: relative;
+}
+
+.header {
     background-color: $milk;
     width: 100%;
     height: 67px;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 }
 
 .desctop-header {
@@ -24,6 +28,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 40px;
+    box-shadow: $header-shadow;
 }
 
 .desctop-header li a, .curr-lang {
@@ -147,10 +152,10 @@ header {
             border-radius: 4px;
 
             &:nth-child(1) {
-                transition: .3s;
+                transition: .1s;
             }
             &:nth-child(3) {
-                transition: .3s;
+                transition: .1s;
             }
         }
     }
@@ -163,21 +168,69 @@ header {
             position: absolute;
 
             &:nth-child(1) {
-                transition: .3s;
+                transition: .1s;
                 rotate: 45deg;
             }
             &:nth-child(2) {
                 visibility: hidden;
             }
             &:nth-child(3) {
-                transition: .3s;
+                transition: .1s;
                 rotate: -45deg;
             }
         }
     }
-
 }
 
+.mobile-header__list {
+    width: 100%;
+    display: flex;
+    gap: 28px;
+    padding-bottom: 28px;
+    padding-top: 12px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $milk;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    z-index: 999;
+    transition: .3s;
+
+    & li a {
+        position: relative;
+        color: $text-color;
+        font-family: $Ir;
+        transition: .3s;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $text-color;
+            box-shadow: $link-shadow;
+            width: 0;
+            height: 4px;
+            border-radius: 2px;
+            bottom: -7px;
+            left: 0;
+        }
+
+        &:hover {
+            color: $title-color;
+
+            &::after {
+                transition: .3s;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.mobile-header__list.open {
+    bottom: -145px;
+    transition: .3s;
+}
 
 
 
@@ -192,7 +245,11 @@ header {
 }
 
 @media screen and (max-width: 425px) {
-    header {
+    .mobile-header__list {
+        box-shadow: $header-shadow;
+    }
+
+    .header {
         height: 50px;
     }
 

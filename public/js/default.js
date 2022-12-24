@@ -7,7 +7,10 @@
   \*********************************/
 /***/ (() => {
 
-
+$('.mobile-header__burger').click(function () {
+  $('.mobile-header__burger').toggleClass('active');
+  $('.mobile-header__list').toggleClass('open');
+});
 
 /***/ }),
 
