@@ -1,1 +1,178 @@
 @import '../variables.scss';
+
+.row {
+    display: flex;
+    gap: 31px;
+}
+
+.my-contacts {
+    position: relative;
+    max-width: 399px;
+    background-color: $blue-block;
+    box-shadow: $default-shadow;
+    border-radius: 10px;
+    padding: 87px 39px 36px 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__avatar {
+        position: absolute;
+        top: -75px;
+        left: calc(50% - 75px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $blue-block;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        box-shadow: $default-shadow;
+
+        img {
+            border-radius: 50%;
+            width: 134px;
+            height: 134px;
+        }
+    }
+
+    &__title {
+        color: $subtitle-color;
+        font-family: $Isb;
+        font-size: $subtitle-size;
+        margin-bottom: 17px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        word-wrap: break-word;
+        gap: 15px;
+    }
+
+    &__list li {
+        white-space: nowrap;
+    }
+
+    &__list, &__list a {
+        color: $text-color;
+        font-size: $text-size;
+        font-family: $Ir;
+    }
+
+    &__list a {
+        position: relative;
+        transition: .3s;
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $text-color;
+            box-shadow: $link-shadow;
+            width: 0;
+            height: 2px;
+            border-radius: 2px;
+            bottom: -3px;
+            left: 0;
+        }
+
+        &:hover {
+            color: $title-color;
+
+            &::after {
+                transition: .3s;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.my-skills {
+    background-color: $blue-block;
+    box-shadow: $default-shadow;
+    border-radius: 10px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 21px 39px 36px 39px;
+    gap: 24px;
+    align-items: center;
+    width: 100%;
+
+
+    &__title {
+        font-size: $title-size;
+        font-family: $Ib;
+        color: $title-color;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 70px;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &-title {
+            font-size: $sub-subtitle-size;
+            color: $subtitle-color;
+            font-family: $Isb;
+        }
+
+        
+
+        li, li a {
+            color: $text-color;
+            font-size: $text-size;
+            font-family: $Ir;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 21px;
+        gap: 15px;
+
+        .my-skills__subskill {
+            font-size: $sub-subtitle-size;
+            font-family: $Isb;
+            color: $sub-subtitle-color;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 840px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .my-contacts {
+        width: 100%;
+    }
+}

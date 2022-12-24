@@ -16,3 +16,149 @@
   font-style: normal;
   font-weight: 600;
 }
+.row {
+  display: flex;
+  gap: 31px;
+}
+
+.my-contacts {
+  position: relative;
+  max-width: 399px;
+  background-color: rgba(201, 237, 255, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 87px 39px 36px 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.my-contacts__avatar {
+  position: absolute;
+  top: -75px;
+  left: calc(50% - 75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(201, 237, 255, 0.7);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.my-contacts__avatar img {
+  border-radius: 50%;
+  width: 134px;
+  height: 134px;
+}
+.my-contacts__title {
+  color: #434343;
+  font-family: "Inter-SemiBold";
+  font-size: 24px;
+  margin-bottom: 17px;
+}
+.my-contacts__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  gap: 15px;
+}
+.my-contacts__list li {
+  white-space: nowrap;
+}
+.my-contacts__list, .my-contacts__list a {
+  color: #7B7B7B;
+  font-size: 16px;
+  font-family: "Inter-Regular";
+}
+.my-contacts__list a {
+  position: relative;
+  transition: 0.3s;
+}
+.my-contacts__list a::after {
+  position: absolute;
+  content: "";
+  background-color: #7B7B7B;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  bottom: -3px;
+  left: 0;
+}
+.my-contacts__list a:hover {
+  color: #4B4B4B;
+}
+.my-contacts__list a:hover::after {
+  transition: 0.3s;
+  width: 100%;
+}
+
+.my-skills {
+  background-color: rgba(201, 237, 255, 0.7);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 21px 39px 36px 39px;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+.my-skills__title {
+  font-size: 40px;
+  font-family: "Inter-Bold";
+  color: #4B4B4B;
+}
+.my-skills__cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 70px;
+}
+.my-skills__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.my-skills__card-title {
+  font-size: 20px;
+  color: #434343;
+  font-family: "Inter-SemiBold";
+}
+.my-skills__card li, .my-skills__card li a {
+  color: #7B7B7B;
+  font-size: 16px;
+  font-family: "Inter-Regular";
+}
+.my-skills__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 21px;
+  gap: 15px;
+}
+.my-skills__list .my-skills__subskill {
+  font-size: 20px;
+  font-family: "Inter-SemiBold";
+  color: #717171;
+}
+
+@media screen and (max-width: 840px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .my-contacts {
+    width: 100%;
+  }
+}

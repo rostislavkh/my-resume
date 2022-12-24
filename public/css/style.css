@@ -87,6 +87,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -149,4 +150,11 @@ button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none;
   transition: 0.3s;
+}
+
+.container {
+  margin: 106px auto auto auto;
+  width: 100%;
+  max-width: 1142px;
+  padding: 0 12px;
 }
