@@ -19,9 +19,10 @@ mix.js('resources/js/default.js', 'js');
 
 // lib
 mix.copy('resources/js/libs/jquery.js', 'public/js');
+mix.copy('resources/js/libs/slick.js', 'public/js');
 
 // pages
-// mix.js('resources/js/pages/page-login.js', 'js');
+mix.js('resources/js/pages/home.js', 'js');
 
 //========================================================= SCSS file ===========================================================
 
@@ -35,6 +36,7 @@ mix.sass('resources/scss/variables.scss', 'css');
 // lib
 mix.styles([
     'resources/scss/libs/drop.css',
+    'resources/scss/libs/slick.css',
 ], 'public/css/all-lib.css');
 
 // pages

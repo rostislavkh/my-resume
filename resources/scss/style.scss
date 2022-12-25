@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 html,
 body,
 div,
@@ -152,7 +154,7 @@ button {
     transition: .3s;
 }
 
-.container {
+.container, .container-2 {
     margin: 106px auto auto auto;
     width: 100%;
     max-width: 1142px;
@@ -160,4 +162,39 @@ button {
     display: flex;
     flex-direction: column;
     gap: 31px;
+    min-width: 0;
+}
+
+.container-2 {
+    margin: 33px auto auto auto;
+    padding: 0;
+}
+
+.link {
+    color: $text-color;
+    font-size: $text-size;
+    font-family: $Ir;
+    position: relative;
+    transition: .3s;
+    
+    &::after {
+        position: absolute;
+        content: "";
+        background-color: $text-color;
+        box-shadow: $link-shadow;
+        width: 0;
+        height: 2px;
+        border-radius: 2px;
+        bottom: -3px;
+        left: 0;
+    }
+
+    &:hover {
+        color: $title-color;
+
+        &::after {
+            transition: .3s;
+            width: 100%;
+        }
+    }
 }

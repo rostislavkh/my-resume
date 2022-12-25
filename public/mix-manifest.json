@@ -1,10 +1,12 @@
 {
     "/js/default.js": "/js/default.js?id=e042b7965359803db9c6fa9095db14a5",
-    "/css/home.css": "/css/home.css?id=b6a0885c279d67177b6f2f5cdc2a5c04",
+    "/js/home.js": "/js/home.js?id=a224d85da104240bfa897d71da5b2abc",
+    "/css/home.css": "/css/home.css?id=77168884892b507da68d8f5ce399a12d",
     "/css/variables.css": "/css/variables.css?id=45a0a20940c1683fb7ef1584ba94c616",
     "/css/fonts.css": "/css/fonts.css?id=45a0a20940c1683fb7ef1584ba94c616",
     "/css/app-layout.css": "/css/app-layout.css?id=763f22035e516bbb4bda7e9c942a88ca",
-    "/css/style.css": "/css/style.css?id=de5cc1383872c8cbe59932ba820b8a43",
+    "/css/style.css": "/css/style.css?id=7a346b2b775339bdbd866db89c708a7d",
     "/js/jquery.js": "/js/jquery.js?id=681d56a932e0198a269d1f6f26d7998b",
-    "/css/all-lib.css": "/css/all-lib.css?id=480093e80365f3005b6c98782bcf1704"
+    "/js/slick.js": "/js/slick.js?id=5f8f4aed010e1afe499184d8197309f9",
+    "/css/all-lib.css": "/css/all-lib.css?id=6a410cf048642d41c22ba2689925762e"
 }

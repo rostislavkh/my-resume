@@ -4,12 +4,15 @@
 
 $milk: #FBFBFB;
 $text-color: #7B7B7B;
+$white-text-color: rgba(255, 255, 255, 1);
 $title-color: #4B4B4B;
 $body-bg: #F4FAFD;
 $blue-block: rgba(201, 237, 255, 0.7);
 $subtitle-color: #434343;
 $sub-subtitle-color: #717171;
 $yellow-block: rgba(252, 255, 109, 0.5);
+$hover-color: #B0BFF7;
+$default-dots-color: #D9D9D9;
 
 // fonts
 
@@ -28,3 +31,4 @@ $title-size: 40px;
 $header-shadow: 0px 4px 12px 6px #E8EEF1;
 $link-shadow: 0px 2px 4px 0px #00000040;
 $default-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$dots-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.25);;

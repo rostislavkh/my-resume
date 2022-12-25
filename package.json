@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/rostislavkh/my-resume/issues"
   },
-  "homepage": "https://github.com/rostislavkh/my-resume#readme"
+  "homepage": "https://github.com/rostislavkh/my-resume#readme",
+  "dependencies": {
+    "swiper": "^8.4.5"
+  }
 }
