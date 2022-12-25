@@ -1,0 +1,83 @@
+@import '../variables.scss';
+
+.projects {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    &__item {
+        width: 416px;
+        min-height: 100%;
+        background-color: $milk;
+        box-shadow: $default-shadow;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .img {
+            height: 273px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .3s;
+            }
+
+            .title {
+                position: absolute;
+                color: $milk;
+                font-size: $subtitle-size;
+                font-family: $Isb;
+                bottom: 0;
+                padding: 16px 0;
+                width: 100%;
+                text-align: center;
+                background: rgba(217, 217, 217, 0.1);
+                backdrop-filter: blur(10px);
+                border-radius: 10px 10px 0 0;
+            }
+        }
+
+        &:hover .img img {
+            transform: scale(1.1);
+            transition: .3s;
+        }
+
+        .text {
+            max-width: 100%;
+            padding: 12px 20px;
+            font-size: $text-size;
+            color: $text-color;
+            font-family: $Ir;
+            text-align: center;
+        }
+
+        .more-link {
+            font-size: $text-size;
+            color: $text-color;
+            font-family: $Ir;
+            padding: 6px 62px;
+            border: 1px solid $text-color;
+            border-radius: 10px 0 10px 0;
+            margin: 5px auto 20px auto;
+            display: block;
+            width: max-content;
+            box-shadow: $default-shadow;
+            transition: .3s;
+
+            &:hover {
+                color: $milk;
+                background-color: $text-color;
+                border-color: $milk;
+                transition: .3s;
+            }
+        }
+    }
+}

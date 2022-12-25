@@ -154,7 +154,7 @@ button {
     transition: .3s;
 }
 
-.container, .container-2 {
+.container, .container-2, .container-3 {
     margin: 106px auto auto auto;
     width: 100%;
     max-width: 1142px;
@@ -168,6 +168,11 @@ button {
 .container-2 {
     margin: 33px auto auto auto;
     padding: 0;
+}
+
+.container-3 {
+    max-width: 1330px;
+    margin: 45px auto auto auto;
 }
 
 .link {
@@ -195,6 +200,47 @@ button {
         &::after {
             transition: .3s;
             width: 100%;
+        }
+    }
+}
+
+.pagination {
+    margin: 20px auto auto auto;
+    .pagination-list {
+        display: flex;
+        gap: 23px;
+
+        li span, li a {
+            font-size: $text-size;
+            font-family: $Isb;
+            color: $text-color;
+            transition: .3s;
+        }
+
+        li.active span, li.active a {
+            color: $hover-color;
+        }
+
+        li span:hover, li a:hover {
+            color: $hover-color;
+            transition: .3s;
+        }
+
+        .pagination-item {
+            span svg line, a svg line {
+                transition: .3s;
+            }
+        }
+
+        .pagination-item:first-child:not(.disable), .pagination-item:last-child:not(.disable) {
+            &:hover span svg line, &:hover a svg line {
+                stroke: $hover-color;
+                transition: .3s;
+            }
+        }
+
+        .pagination-item.disable {
+            opacity: .5;
         }
     }
 }

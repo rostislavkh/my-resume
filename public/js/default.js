@@ -14,6 +14,19 @@ $('.mobile-header__burger').click(function () {
 
 /***/ }),
 
+/***/ "./resources/scss/pages/projects.scss":
+/*!********************************************!*\
+  !*** ./resources/scss/pages/projects.scss ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/scss/style.scss":
 /*!***********************************!*\
   !*** ./resources/scss/style.scss ***!
@@ -170,7 +183,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			"css/variables": 0,
 /******/ 			"css/fonts": 0,
 /******/ 			"css/app-layout": 0,
-/******/ 			"css/style": 0
+/******/ 			"css/style": 0,
+/******/ 			"css/projects": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -220,12 +234,13 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/js/default.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/style.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/app-layout.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/fonts.scss")))
-/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/variables.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style"], () => (__webpack_require__("./resources/scss/pages/home.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style","css/projects"], () => (__webpack_require__("./resources/js/default.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style","css/projects"], () => (__webpack_require__("./resources/scss/style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style","css/projects"], () => (__webpack_require__("./resources/scss/app-layout.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style","css/projects"], () => (__webpack_require__("./resources/scss/fonts.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style","css/projects"], () => (__webpack_require__("./resources/scss/variables.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style","css/projects"], () => (__webpack_require__("./resources/scss/pages/home.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/home","css/variables","css/fonts","css/app-layout","css/style","css/projects"], () => (__webpack_require__("./resources/scss/pages/projects.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

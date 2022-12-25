@@ -41,6 +41,7 @@ mix.styles([
 
 // pages
 mix.sass('resources/scss/pages/home.scss', 'css');
+mix.sass('resources/scss/pages/projects.scss', 'css');
 
 mix.setPublicPath('public')
 mix.version();
