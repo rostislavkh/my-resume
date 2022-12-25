@@ -80,6 +80,12 @@ header {
     }
 }
 
+.desctop-header li a.active {
+    &::after {
+        width: 100%;
+    }
+}
+
 .link-lang {
     color: $text-color!important;
     font-size: $text-size!important;
@@ -224,6 +230,12 @@ header {
                 transition: .3s;
                 width: 100%;
             }
+        }
+    }
+
+    & li a.active {
+        &::after {
+            width: 100%;
         }
     }
 }

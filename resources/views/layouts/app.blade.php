@@ -24,9 +24,8 @@
     <header>
         <div class="header">
             <ul class="desctop-header">
-                <li><a href="#">Main</a></li>
-                <li><a href="#">My info</a></li>
-                <li><a href="#">My projects</a></li>
+                <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">Main</a></li>
+                <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">My projects</a></li>
                 <li>
                     <div class="drop -color-lighter drop--down">
                         <div class="curr-lang">EN</div>
@@ -68,9 +67,8 @@
             </div>
         </div>
         <ul class="mobile-header__list">
-            <li><a href="#">Main</a></li>
-            <li><a href="#">My info</a></li>
-            <li><a href="#">My projects</a></li>
+            <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">Main</a></li>
+            <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">My projects</a></li>
         </ul>
     </header>
 
