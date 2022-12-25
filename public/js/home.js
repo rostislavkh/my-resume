@@ -10,9 +10,9 @@ $(document).ready(function () {
     slidesToScroll: 1,
     centerMode: true,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     variableWidth: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     centerPadding: '0',
     pauseOnDotsHover: true
     // adaptiveHeight: true,
