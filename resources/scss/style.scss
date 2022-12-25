@@ -157,4 +157,7 @@ button {
     width: 100%;
     max-width: 1142px;
     padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
 }

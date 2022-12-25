@@ -154,6 +154,33 @@
     }
 }
 
+.about-me {
+    background-color: $yellow-block;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: $default-shadow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 19px 63px 31px 63px;
+
+    &__title {
+        font-size: $title-size;
+        color: $title-color;
+        font-family: $Ib;
+    }
+
+    &__text {
+        font-size: $sub-subtitle-size;
+        color: $subtitle-color;
+        font-family: $Ir;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
 
 
 
@@ -167,11 +194,21 @@
     .row {
         flex-direction: column;
         align-items: center;
-        gap: 35px;
+        gap: 31px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .about-me {
+        padding: 19px 19px 31px 19px;
     }
 }
 
 @media screen and (max-width: 380px) {
+    .my-skills {
+        padding: 21px 19px 36px 19px;
+    }
+
     .my-contacts {
         width: 100%;
     }
