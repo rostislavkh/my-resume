@@ -19,3 +19,4 @@ Route::get('/', function () {
 })->name('main');
 
 Route::get('/projects', [ProjectsController::class, 'allProjects'])->name('projects');
+Route::get('/project', [ProjectsController::class, 'oneProjects'])->name('project');

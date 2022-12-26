@@ -23,6 +23,7 @@ mix.copy('resources/js/libs/slick.js', 'public/js');
 
 // pages
 mix.js('resources/js/pages/home.js', 'js');
+mix.js('resources/js/pages/project.js', 'js');
 
 //========================================================= SCSS file ===========================================================
 
@@ -42,6 +43,7 @@ mix.styles([
 // pages
 mix.sass('resources/scss/pages/home.scss', 'css');
 mix.sass('resources/scss/pages/projects.scss', 'css');
+mix.sass('resources/scss/pages/project.scss', 'css');
 
 mix.setPublicPath('public')
 mix.version();

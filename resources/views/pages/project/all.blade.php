@@ -6,12 +6,6 @@
     <link href="{{ mix('/css/projects.css') }}" rel="stylesheet">
 @endsection
 
-@section('script')
-    {{-- <script src="{{ mix('js/slick.js') }}"></script> --}}
-@endsection
-
-
-
 @section('content')
     <div class="container-3">
         <div class="projects">
@@ -21,7 +15,7 @@
                     <span class="title">Anti-waste</span>
                 </div>
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-                <a href="#" class="more-link">More</a>
+                <a href="{{ route('project') }}" class="more-link">More</a>
             </div>
             <div class="projects__item">
                 <div class="img">
