@@ -28,37 +28,20 @@
                 </ul>
             </div>
             <div class="my-skills">
-                <span class="my-skills__title" data-aos="fade-left" data-aos-delay="200">My skills</span>
+                <span class="my-skills__title" data-aos="fade-left" data-aos-delay="200">{{ __('My skills') }}</span>
                 <div class="my-skills__cards" data-aos="fade-up" data-aos-delay="100">
-                    <div class="my-skills__card">
-                    <span class="my-skills__card-title">Back-end</span>
-                    <ul class="my-skills__list">
-                        <li>PHP (1,5 years exp)</li>
-                        <li>MySQL (1,5 years exp)</li>
-                        <li class="my-skills__subskill">Frameworks</li>
-                        <li>Laravel</li>
-                        <li>Orchid (Admin panel)</li>
-                    </ul>
-                </div>
-                <div class="my-skills__card" data-aos="fade-up" data-aos-delay="200">
-                    <span class="my-skills__card-title">Front-end</span>
-                    <ul class="my-skills__list">
-                        <li>HTML, CSS, JS (2 year exp)</li>
-                        <li class="my-skills__subskill">Frameworks</li>
-                        <li>Vue.js, JQuery</li>
-                        <li>Bootstrap</li>
-                        <li>Ajax, Axios</li>
-                    </ul>
-                </div>
-                <div class="my-skills__card" data-aos="fade-up" data-aos-delay="300">
-                    <span class="my-skills__card-title">Software</span>
-                    <ul class="my-skills__list">
-                        <li>VS Code, PHPStorm</li>
-                        <li>Figma, Photoshop</li>
-                        <li class="my-skills__subskill">VCS</li>
-                        <li>Github, Gitlab</li>
-                    </ul>
-                </div>
+                    @foreach (\App\Models\Skills::TYPES as $type)
+                        <div class="my-skills__card">
+                            <span class="my-skills__card-title">{{ __($type) }}</span>
+                            <ul class="my-skills__list">
+                                @foreach ($skills as $skill)
+                                    @if($skill->type == $type)
+                                        <li class="{{ $skill->is_bold ? 'my-skills__subskill' : '' }}">{{ $skill->getTranslate('label') }}</li>
+                                    @endif
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

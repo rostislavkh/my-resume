@@ -13,6 +13,7 @@ use App\Orchid\Screens\Examples\ExampleTextEditorsScreen;
 use App\Orchid\Screens\PlatformScreen;
 use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
+use App\Orchid\Screens\Skills\Skills;
 use App\Orchid\Screens\User\UserEditScreen;
 use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
@@ -88,3 +89,7 @@ Route::screen('roles', RoleListScreen::class)
 // My contacts
 Route::screen('my-contacts', Contacts::class)
     ->name('platform.contacts');
+
+// My skills
+Route::screen('my-skills', Skills::class)
+    ->name('platform.skills');

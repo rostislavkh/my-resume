@@ -33,6 +33,7 @@ class PlatformProvider extends OrchidServiceProvider
             ->icon('home')
             ->list([
                 Menu::make('My contacts')->icon('phone')->route('platform.contacts'),
+                Menu::make('Skills')->icon('energy')->route('platform.skills'),
             ]),
             Menu::make('Users')
                 ->icon('user')
