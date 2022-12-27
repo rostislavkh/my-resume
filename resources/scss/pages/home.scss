@@ -29,7 +29,8 @@
         width: 150px;
         height: 150px;
         box-shadow: $default-shadow;
-        transition: .5s;
+        transition: .3s!important;
+        overflow: hidden;
 
         img {
             border-radius: 50%;
