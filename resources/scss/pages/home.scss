@@ -83,6 +83,7 @@
     gap: 24px;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 
 
     &__title {
@@ -147,6 +148,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 19px 63px 31px 63px;
+    overflow: hidden;
 
     &__title {
         font-size: $title-size;

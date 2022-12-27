@@ -93,6 +93,7 @@
   gap: 24px;
   align-items: center;
   width: 100%;
+  overflow: hidden;
 }
 .my-skills__title {
   font-size: 40px;
@@ -147,6 +148,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 19px 63px 31px 63px;
+  overflow: hidden;
 }
 .about-me__title {
   font-size: 40px;

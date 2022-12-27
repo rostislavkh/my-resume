@@ -17,11 +17,11 @@
     <div class="container">
         <div class="row">
             <div class="my-contacts">
-                <div class="my-contacts__avatar">
+                <div class="my-contacts__avatar" data-aos="fade-right">
                     <img src="/img/avatar.jpg" alt="avatar">
                 </div>
-                <span class="my-contacts__title">My contacts</span>
-                <ul class="my-contacts__list">
+                <span class="my-contacts__title" data-aos="fade-right" data-aos-delay="200">My contacts</span>
+                <ul class="my-contacts__list" data-aos="fade-left" data-aos-delay="200">
                     <li>Phone: <a class="link" href="tel:+380987065558" target="_blank">+ 38(098) 706-55-58</a></li>
                     <li>Telegram: <a class="link" href="https://telegram.me/rkhorolkiy" target="_blank">@rkhorolkiy</a></li>
                     <li>Instagram: <a class="link" href="https://www.instagram.com/rkhorolskiy" target="_blank">@rkhorolkiy</a></li>
@@ -30,8 +30,8 @@
                 </ul>
             </div>
             <div class="my-skills">
-                <span class="my-skills__title">My skills</span>
-                <div class="my-skills__cards">
+                <span class="my-skills__title" data-aos="fade-left" data-aos-delay="200">My skills</span>
+                <div class="my-skills__cards" data-aos="fade-up" data-aos-delay="100">
                     <div class="my-skills__card">
                     <span class="my-skills__card-title">Back-end</span>
                     <ul class="my-skills__list">
@@ -42,7 +42,7 @@
                         <li>Orchid (Admin panel)</li>
                     </ul>
                 </div>
-                <div class="my-skills__card">
+                <div class="my-skills__card" data-aos="fade-up" data-aos-delay="200">
                     <span class="my-skills__card-title">Front-end</span>
                     <ul class="my-skills__list">
                         <li>HTML, CSS, JS (2 year exp)</li>
@@ -52,7 +52,7 @@
                         <li>Ajax, Axios</li>
                     </ul>
                 </div>
-                <div class="my-skills__card">
+                <div class="my-skills__card" data-aos="fade-up" data-aos-delay="300">
                     <span class="my-skills__card-title">Software</span>
                     <ul class="my-skills__list">
                         <li>VS Code, PHPStorm</li>
@@ -64,17 +64,17 @@
                 </div>
             </div>
         </div>
-        <div class="about-me">
-            <span class="about-me__title">About me</span>
-            <div class="about-me__text">
+        <div class="about-me" data-aos="fade-up">
+            <span class="about-me__title" data-aos="fade-left" data-aos-delay="200">About me</span>
+            <div class="about-me__text" data-aos="fade-right" data-aos-delay="200">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </div>
         </div>
     </div>
     <div class="container-2">
-        <div class="last-projects">
-            <span class="last-projects__title">Last projects</span>
-            <div class="last-projects__slider-wrapper">
+        <div class="last-projects" data-aos="fade-up" data-aos-delay="100">
+            <span class="last-projects__title" data-aos="fade-right" data-aos-delay="300">Last projects</span>
+            <div class="last-projects__slider-wrapper" data-aos="fade-left" data-aos-delay="300">
                 <svg class="custom-arrow prev-slide" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M62.3021 29.4793H68.847C69.2711 29.4793 69.6154 29.1351 69.6154 28.711C69.6154 28.2869 69.2711 27.9426 68.847 27.9426H62.3021C61.878 27.9426 61.5338 28.2869 61.5338 28.711C61.5338 29.1351 61.878 29.4793 62.3021 29.4793Z" fill="#4B4B4B"/>
                     <path d="M25.1489 59.6928C25.6122 59.6928 26.0755 59.5168 26.4282 59.1641L33.7945 51.7979C34.4998 51.091 34.4998 49.9431 33.7945 49.2377L26.5358 41.979H47.1939C47.618 41.979 47.9622 41.6355 47.9622 41.2106C47.9622 40.7857 47.618 40.4423 47.1939 40.4423H24.6802C24.3698 40.4423 24.0886 40.629 23.9702 40.9164C23.8511 41.2037 23.9172 41.5341 24.137 41.7539L32.708 50.3242C32.8148 50.431 32.8148 50.6046 32.7072 50.7122L25.3425 58.0769C25.2357 58.1845 25.0621 58.1837 24.9553 58.0769L2.07351 35.1944C2.00897 35.1299 1.99745 35.0476 1.99975 34.99C1.99745 34.8748 2.00897 34.7925 2.07351 34.728L24.9553 11.8455C25.0943 11.7072 25.2019 11.7041 25.3425 11.8455L32.708 19.2102C32.8148 19.317 32.8148 19.4907 32.708 19.5975L24.1377 28.167C23.918 28.3867 23.8519 28.7171 23.971 29.0045C24.0893 29.2919 24.3705 29.4786 24.681 29.4786H55.5229C55.947 29.4786 56.2913 29.1343 56.2913 28.7102C56.2913 28.2861 55.947 27.9419 55.5229 27.9419H26.535L33.7937 20.6832C34.4991 19.977 34.4991 18.8283 33.7937 18.123L26.4282 10.7575C25.7428 10.0729 24.5503 10.0737 23.868 10.7575L0.986286 33.6392C0.629768 33.995 0.444588 34.4744 0.463799 34.9877C0.444588 35.4433 0.629768 35.922 0.986286 36.2785L23.868 59.1611C24.2215 59.516 24.6848 59.6928 25.1489 59.6928Z" fill="#4B4B4B"/>

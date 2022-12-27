@@ -9,8 +9,7 @@ $(document).ready(() => {
         variableWidth: true,
         autoplaySpeed: 4000,
         centerPadding: '0',
-        pauseOnDotsHover: true,
-        // adaptiveHeight: true,
+        pauseOnDotsHover: true
     });
 });
 

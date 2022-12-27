@@ -9,3 +9,12 @@ $('.next-slide').click(() => {
 $('.prev-slide').click(() => {
     $('.slick-prev').click();
 })
+
+AOS.init({
+    duration: 600,
+    offset: 50
+});
+
+$(document).ready(() => {
+    $('body,html').animate({ scrollTop: 0 }, 400);
+});

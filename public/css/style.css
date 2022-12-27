@@ -171,26 +171,33 @@ button {
 }
 
 .container, .container-2, .container-3 {
-  margin: 106px auto auto auto;
   width: 100%;
   max-width: 1142px;
-  padding: 0 12px;
+  padding: 106px 12px 12px 12px;
   display: flex;
   flex-direction: column;
   gap: 31px;
   min-width: 0;
+  overflow: hidden;
+  margin: auto;
 }
 
 .container-2 {
   margin: 33px auto auto auto;
-  padding: 0;
+  padding: 12px;
 }
 
 .container-3 {
   max-width: 1330px;
-  margin: 45px auto auto auto;
+  margin: -80px auto auto auto;
 }
 
+@media screen and (max-width: 1140px) {
+  .container-2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .link {
   color: #7B7B7B;
   font-size: 16px;

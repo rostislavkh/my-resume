@@ -9,7 +9,7 @@
 @section('content')
     <div class="container-3">
         <div class="projects">
-            <div class="projects__item">
+            <div class="projects__item" data-aos="zoom-in-up" data-aos-delay="300">
                 <div class="img">
                     <img src="/img/avatar.jpg" alt="img">
                     <span class="title">Anti-waste</span>
@@ -17,7 +17,7 @@
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
                 <a href="{{ route('project') }}" class="more-link">More</a>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="zoom-in-up" data-aos-delay="300">
                 <div class="img">
                     <img src="/img/avatar.jpg" alt="img">
                     <span class="title">Anti-waste</span>
@@ -25,7 +25,7 @@
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
                 <a href="#" class="more-link">More</a>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="zoom-in-up" data-aos-delay="300">
                 <div class="img">
                     <img src="/img/avatar.jpg" alt="img">
                     <span class="title">Anti-waste</span>
@@ -33,7 +33,15 @@
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
                 <a href="#" class="more-link">More</a>
             </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="img">
+                    <img src="/img/avatar.jpg" alt="img">
+                    <span class="title">Anti-waste</span>
+                </div>
+                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                <a href="{{ route('project') }}" class="more-link">More</a>
+            </div>
+            <div class="projects__item" data-aos="zoom-in-up" data-aos-delay="300">
                 <div class="img">
                     <img src="/img/avatar.jpg" alt="img">
                     <span class="title">Anti-waste</span>
@@ -41,15 +49,7 @@
                 <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
                 <a href="#" class="more-link">More</a>
             </div>
-            <div class="projects__item">
-                <div class="img">
-                    <img src="/img/avatar.jpg" alt="img">
-                    <span class="title">Anti-waste</span>
-                </div>
-                <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
-                <a href="#" class="more-link">More</a>
-            </div>
-            <div class="projects__item">
+            <div class="projects__item" data-aos="zoom-in-up" data-aos-delay="300">
                 <div class="img">
                     <img src="/img/avatar.jpg" alt="img">
                     <span class="title">Anti-waste</span>

@@ -15,10 +15,8 @@ $(document).ready(function () {
     autoplaySpeed: 4000,
     centerPadding: '0',
     pauseOnDotsHover: true
-    // adaptiveHeight: true,
   });
 });
-
 $('.frame').hover(function (e) {
   var _this = this;
   var frame = $(this);

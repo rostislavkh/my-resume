@@ -192,6 +192,7 @@ header {
 .mobile-header__list {
     width: 100%;
     display: flex;
+    opacity: 0;
     gap: 28px;
     padding-bottom: 28px;
     padding-top: 12px;
@@ -200,7 +201,7 @@ header {
     align-items: center;
     background-color: $milk;
     position: fixed;
-    top: -97px;
+    top: -55px;
     left: 0;
     z-index: 999;
     transition: .3s;
@@ -243,6 +244,7 @@ header {
 .mobile-header__list.open {
     top: 44px;
     transition: .3s;
+    opacity: 1;
 }
 
 
