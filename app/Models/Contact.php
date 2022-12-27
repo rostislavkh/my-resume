@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Helpers\Translation;
 use Orchid\Screen\AsSource;
 use Orchid\Filters\Filterable;
 use Illuminate\Database\Eloquent\Model;
@@ -12,6 +13,7 @@ class Contact extends Model
     use HasFactory;
     use AsSource;
     use Filterable;
+    use Translation;
 
     protected $fillable = [
         'name',

@@ -75,11 +75,11 @@ class RoleEditScreen extends Screen
     public function commandBar(): iterable
     {
         return [
-            Button::make(__('Save'))
+            Button::make('Save')
                 ->icon('check')
                 ->method('save'),
 
-            Button::make(__('Remove'))
+            Button::make('Remove')
                 ->icon('trash')
                 ->method('remove')
                 ->canSee($this->role->exists),
@@ -132,7 +132,7 @@ class RoleEditScreen extends Screen
 
         $role->save();
 
-        Toast::info(__('Role was saved'));
+        Toast::info('Role was saved');
 
         return redirect()->route('platform.systems.roles');
     }
@@ -148,7 +148,7 @@ class RoleEditScreen extends Screen
     {
         $role->delete();
 
-        Toast::info(__('Role was removed'));
+        Toast::info('Role was removed');
 
         return redirect()->route('platform.systems.roles');
     }

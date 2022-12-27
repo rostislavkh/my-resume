@@ -34,11 +34,11 @@ class PlatformProvider extends OrchidServiceProvider
             ->list([
                 Menu::make('My contacts')->icon('phone')->route('platform.contacts'),
             ]),
-            Menu::make(__('Users'))
+            Menu::make('Users')
                 ->icon('user')
                 ->route('platform.systems.users')
                 ->permission('platform.systems.users')
-                ->title(__('Access rights')),
+                ->title('Access rights'),
         ];
     }
 
@@ -48,7 +48,7 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerProfileMenu(): array
     {
         return [
-            Menu::make(__('Profile'))
+            Menu::make('Profile')
                 ->route('platform.profile')
                 ->icon('user'),
         ];
@@ -60,9 +60,9 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerPermissions(): array
     {
         return [
-            ItemPermission::group(__('System'))
-                ->addPermission('platform.systems.roles', __('Roles'))
-                ->addPermission('platform.systems.users', __('Users')),
+            ItemPermission::group('System')
+                ->addPermission('platform.systems.roles', 'Roles')
+                ->addPermission('platform.systems.users', 'Users'),
         ];
     }
 }

@@ -25,7 +25,7 @@ class Contacts extends Screen
     public function query(): iterable
     {
         return [
-            'contacts' => Contact::orderBy('id', 'desc')->paginate(25)
+            'contacts' => Contact::paginate(25)
         ];
     }
 
@@ -47,7 +47,7 @@ class Contacts extends Screen
     public function commandBar(): iterable
     {
         return [
-            ModalToggle::make(__('Create'))->icon('plus')->modal('create')->modalTitle(__('Create contact'))->method('create')
+            ModalToggle::make('Create')->icon('plus')->modal('create')->modalTitle('Create contact')->method('create')
         ];
     }
 

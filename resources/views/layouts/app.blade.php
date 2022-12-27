@@ -28,14 +28,14 @@
                 <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">My projects</a></li>
                 <li>
                     <div class="drop -color-lighter drop--down">
-                        <div class="curr-lang">EN</div>
+                        <div class="curr-lang">{{ \Illuminate\Support\Str::upper(\Illuminate\Support\Facades\App::getLocale()) }}</div>
 
                         <div class="drop__content -transition-slide-in">
                             <div class="drop-arrow"></div>
 
                             <div class="drop-list drop-list--lang -size-low -position-center -border-rounded">
-                                <a class="link-lang" href="#">EN</a>
-                                <a class="link-lang" href="#">UA</a>
+                                <a class="link-lang" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">EN</a>
+                                <a class="link-lang" href="{{ LaravelLocalization::getLocalizedURL('uk', null, [], true) }}">UK</a>
                             </div>
                         </div>
                     </div>
@@ -46,14 +46,14 @@
                 <div class="mobile-header__right-block">
                     <div class="mobile-header__lang">
                         <div class="drop -color-lighter drop--down">
-                            <div class="curr-lang">EN</div>
+                            <div class="curr-lang">{{ \Illuminate\Support\Str::upper(\Illuminate\Support\Facades\App::getLocale()) }}</div>
 
                             <div class="drop__content -transition-slide-in">
                                 <div class="drop-arrow"></div>
 
                                 <div class="drop-list drop-list--lang -size-low -position-center -border-rounded">
-                                    <a class="link-lang" href="#">EN</a>
-                                    <a class="link-lang" href="#">UA</a>
+                                    <a class="link-lang" href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}">EN</a>
+                                    <a class="link-lang" href="{{ LaravelLocalization::getLocalizedURL('uk', null, [], true) }}">UA</a>
                                 </div>
                             </div>
                         </div>

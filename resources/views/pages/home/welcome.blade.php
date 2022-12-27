@@ -20,13 +20,11 @@
                 <div class="my-contacts__avatar" data-aos="fade-right">
                     <img src="/img/avatar.jpg" alt="avatar">
                 </div>
-                <span class="my-contacts__title" data-aos="fade-right" data-aos-delay="200">My contacts</span>
+                <span class="my-contacts__title" data-aos="fade-right" data-aos-delay="200">{{ __('My contacts') }}</span>
                 <ul class="my-contacts__list" data-aos="fade-left" data-aos-delay="200">
-                    <li>Phone: <a class="link" href="tel:+380987065558" target="_blank">+ 38(098) 706-55-58</a></li>
-                    <li>Telegram: <a class="link" href="https://telegram.me/rkhorolkiy" target="_blank">@rkhorolkiy</a></li>
-                    <li>Instagram: <a class="link" href="https://www.instagram.com/rkhorolskiy" target="_blank">@rkhorolkiy</a></li>
-                    <li>Facebook: <a class="link" href="facebook.com" target="_blank">Link</a></li>
-                    <li>Gmail: <a class="link" href="mailto:rkhorolskij@gmail.com" target="_blank">rkhorolskij@gmail.com</a></li>
+                    @foreach ($contacts as $contact)
+                        <li>{{ $contact->getTranslate('name') }}: <a class="link" href="{{ $contact->href }}" target="_blank">{{ $contact->getTranslate('text_link') }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <div class="my-skills">

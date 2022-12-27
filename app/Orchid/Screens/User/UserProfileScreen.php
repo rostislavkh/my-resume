@@ -70,20 +70,20 @@ class UserProfileScreen extends Screen
     {
         return [
             Layout::block(UserEditLayout::class)
-                ->title(__('Profile Information'))
-                ->description(__("Update your account's profile information and email address."))
+                ->title('Profile Information')
+                ->description("Update your account's profile information and email address.")
                 ->commands(
-                    Button::make(__('Save'))
+                    Button::make('Save')
                         ->type(Color::DEFAULT())
                         ->icon('check')
                         ->method('save')
                 ),
 
             Layout::block(ProfilePasswordLayout::class)
-                ->title(__('Update Password'))
-                ->description(__('Ensure your account is using a long, random password to stay secure.'))
+                ->title('Update Password')
+                ->description('Ensure your account is using a long, random password to stay secure.')
                 ->commands(
-                    Button::make(__('Update password'))
+                    Button::make('Update password')
                         ->type(Color::DEFAULT())
                         ->icon('check')
                         ->method('changePassword')
@@ -108,7 +108,7 @@ class UserProfileScreen extends Screen
             ->fill($request->get('user'))
             ->save();
 
-        Toast::info(__('Profile updated.'));
+        Toast::info('Profile updated.');
     }
 
     /**
@@ -126,6 +126,6 @@ class UserProfileScreen extends Screen
             $user->password = Hash::make($request->get('password'));
         })->save();
 
-        Toast::info(__('Password changed.'));
+        Toast::info('Password changed.');
     }
 }

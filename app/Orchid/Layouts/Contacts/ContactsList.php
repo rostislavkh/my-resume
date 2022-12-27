@@ -35,12 +35,12 @@ class ContactsList extends Table
             TD::make('text_link', 'Text link')->sort()->filter(),
             TD::make('text_link_uk', 'Text link [Ukraine lang]')->sort()->filter(),
             TD::make('href', 'Link')->sort()->filter(),
-            TD::make('actions', __('Actions'))->render(function (Contact $model) {
+            TD::make('actions', 'Actions')->render(function (Contact $model) {
                 return DropDown::make()
                     ->icon('options-vertical')
                     ->list([
-                        ModalToggle::make(__('Edit'))->modal('edit')->method('update')->icon('pencil')->modalTitle(__('Edit contact ') . $model->name)->asyncParameters(['app' => $model->id]),
-                        Button::make(__('Remove'))->icon('trash')->confirm(__('Are you sure?'))->method('remove', [
+                        ModalToggle::make('Edit')->modal('edit')->method('update')->icon('pencil')->modalTitle('Edit contact ' . $model->name)->asyncParameters(['app' => $model->id]),
+                        Button::make('Remove')->icon('trash')->confirm('Are you sure?')->method('remove', [
                             'id' => $model->id
                         ]),
                     ]);

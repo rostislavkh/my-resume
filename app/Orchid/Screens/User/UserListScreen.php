@@ -70,7 +70,7 @@ class UserListScreen extends Screen
     public function commandBar(): iterable
     {
         return [
-            Link::make(__('Add'))
+            Link::make('Add')
                 ->icon('plus')
                 ->route('platform.systems.users.create'),
         ];
@@ -119,7 +119,7 @@ class UserListScreen extends Screen
 
         $user->fill($request->input('user'))->save();
 
-        Toast::info(__('User was saved.'));
+        Toast::info('User was saved.');
     }
 
     /**
@@ -129,6 +129,6 @@ class UserListScreen extends Screen
     {
         User::findOrFail($request->get('id'))->delete();
 
-        Toast::info(__('User was removed'));
+        Toast::info('User was removed');
     }
 }

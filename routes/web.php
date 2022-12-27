@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Home;
 use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home.welcome');
-})->name('main');
 
-Route::get('/projects', [ProjectsController::class, 'allProjects'])->name('projects');
-Route::get('/project', [ProjectsController::class, 'oneProjects'])->name('project');
+Route::group(['prefix' => \Mcamara\LaravelLocalization\Facades\LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
+    Route::get('/', [Home::class, 'index'])->name('main');
+
+    Route::get('/projects', [ProjectsController::class, 'allProjects'])->name('projects');
+    Route::get('/project', [ProjectsController::class, 'oneProjects'])->name('project');
+});
