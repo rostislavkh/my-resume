@@ -34,6 +34,7 @@ class PlatformProvider extends OrchidServiceProvider
             ->list([
                 Menu::make('My contacts')->icon('phone')->route('platform.contacts'),
                 Menu::make('Skills')->icon('energy')->route('platform.skills'),
+                Menu::make('About me')->icon('book-open')->route('platform.about-me'),
             ]),
             Menu::make('Users')
                 ->icon('user')

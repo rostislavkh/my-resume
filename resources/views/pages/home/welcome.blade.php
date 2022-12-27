@@ -18,7 +18,9 @@
         <div class="row">
             <div class="my-contacts">
                 <div class="my-contacts__avatar" data-aos="fade-right">
-                    <img src="/img/avatar.jpg" alt="avatar">
+                    @if($avatar)
+                        <img src="{{ $avatar }}" alt="avatar">
+                    @endif
                 </div>
                 <span class="my-contacts__title" data-aos="fade-right" data-aos-delay="200">{{ __('My contacts') }}</span>
                 <ul class="my-contacts__list" data-aos="fade-left" data-aos-delay="200">
@@ -46,9 +48,9 @@
             </div>
         </div>
         <div class="about-me" data-aos="fade-up">
-            <span class="about-me__title" data-aos="fade-left" data-aos-delay="200">About me</span>
+            <span class="about-me__title" data-aos="fade-left" data-aos-delay="200">{{ __('About me') }}</span>
             <div class="about-me__text" data-aos="fade-right" data-aos-delay="200">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                {!! $about_me->getTranslate('text') !!}
             </div>
         </div>
     </div>
