@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Orchid\Screens;
 
 use App\Models\CheckMyResume;
+use App\Orchid\Layouts\CheckMyResume\CheckMyResume as CheckMyResumeCheckMyResume;
 use App\Orchid\Layouts\ChekMyResume;
 use Orchid\Screen\Actions\Link;
 use Orchid\Screen\Screen;
@@ -22,7 +23,8 @@ class PlatformScreen extends Screen
         return [
             'chart' => [
                 CheckMyResume::countByDays(null, null, 'chart_date')->toChart('Checks')
-                ]
+            ],
+            'checks' => CheckMyResume::orderBy('updated_at', 'desc')->paginate(35)
         ];
     }
 
@@ -74,7 +76,8 @@ class PlatformScreen extends Screen
     public function layout(): iterable
     {
         return [
-            ChekMyResume::class
+            ChekMyResume::class,
+            CheckMyResumeCheckMyResume::class
         ];
     }
 }

@@ -6,6 +6,7 @@ use App\Models\CheckMyResume;
 use Carbon\Carbon;
 use Closure;
 use Illuminate\Http\Request;
+use Orchid\Screen\Layouts\Card;
 
 class Check
 {
@@ -37,6 +38,10 @@ class Check
                 'country' => $isp['country_name'],
                 'date_time' => Carbon::now(),
                 'chart_date' => Carbon::now()
+            ]);
+        } else {
+            $check->update([
+                'updated_at' => Carbon::now()
             ]);
         }
 

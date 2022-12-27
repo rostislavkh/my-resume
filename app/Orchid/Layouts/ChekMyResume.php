@@ -17,7 +17,7 @@ class ChekMyResume extends Chart
         '#9c0216',
     ];
 
-    protected $title = 'Charts';
+    protected $title = 'Number of views of my resume';
 
     protected $type = 'line';
 
