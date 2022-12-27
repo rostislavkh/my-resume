@@ -7,6 +7,7 @@ namespace App\Orchid;
 use Orchid\Platform\Dashboard;
 use Orchid\Platform\ItemPermission;
 use Orchid\Platform\OrchidServiceProvider;
+use Orchid\Screen\Actions\DropDown;
 use Orchid\Screen\Actions\Menu;
 use Orchid\Support\Color;
 
@@ -28,6 +29,11 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
+            Menu::make('Home')
+            ->icon('home')
+            ->list([
+                Menu::make('My contacts')->icon('phone')->route('platform.contacts'),
+            ]),
             Menu::make(__('Users'))
                 ->icon('user')
                 ->route('platform.systems.users')
