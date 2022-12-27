@@ -42,7 +42,7 @@
                 </li>
             </ul>
             <div class="mobile-header">
-                <span class="mobile-header__title">Rostislav Khorolskiy</span>
+                <a href="/" class="mobile-header__title">Rostislav Khorolskiy</a>
                 <div class="mobile-header__right-block">
                     <div class="mobile-header__lang">
                         <div class="drop -color-lighter drop--down">

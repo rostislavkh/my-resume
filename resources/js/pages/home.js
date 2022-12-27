@@ -44,10 +44,3 @@ $('.frame').hover(function (e) {
         this.style.transform = ''
     })
 })
-
-$('.next-slide').click(() => {
-    $('.slick-next').click();
-})
-$('.prev-slide').click(() => {
-    $('.slick-prev').click();
-})

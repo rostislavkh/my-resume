@@ -44,11 +44,5 @@ $('.frame').hover(function (e) {
     _this.style.transform = '';
   });
 });
-$('.next-slide').click(function () {
-  $('.slick-next').click();
-});
-$('.prev-slide').click(function () {
-  $('.slick-prev').click();
-});
 /******/ })()
 ;

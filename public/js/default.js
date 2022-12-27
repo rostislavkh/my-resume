@@ -11,6 +11,12 @@ $('.mobile-header__burger').click(function () {
   $('.mobile-header__burger').toggleClass('active');
   $('.mobile-header__list').toggleClass('open');
 });
+$('.next-slide').click(function () {
+  $('.slick-next').click();
+});
+$('.prev-slide').click(function () {
+  $('.slick-prev').click();
+});
 
 /***/ }),
 

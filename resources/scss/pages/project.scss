@@ -1,1 +1,169 @@
 @import '../variables.scss';
+
+.slider {
+    max-height: 400px;
+    border-radius: 10px;
+    background-color: $blue-block;
+    box-shadow: $default-shadow;
+
+    &__item {
+        display: flex!important;
+        justify-content: center;
+        align-items: flex-start;
+
+        img {
+            width: auto!important;
+            max-width: 100%;
+            object-fit: cover;
+            max-height: 400px;
+            border-radius: 10px;
+            box-shadow: $default-shadow;
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+}
+
+.custom-arrow {
+    position: absolute;
+    top: calc(50% - 40px);
+    cursor: pointer;
+    transition: .3s;
+
+    path {
+        transition: .3s;
+    }
+
+    &:hover {
+        transition: .3s;
+        transform: scale(1.1);
+
+        path {
+            fill: $hover-color;
+            transition: .3s;
+        }
+    }
+}
+
+.prev-slide {
+    left: -80px;
+}
+
+.next-slide {
+    right: -80px;
+}
+
+.slick-prev {
+    font-size: 0;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 2;
+
+    .slick-active button {
+        background-color: $hover-color;
+    }
+
+    li button {
+        font-size: 0;
+        background-color: $default-dots-color;
+        box-shadow: $dots-shadow;
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        border: none;
+
+        &:hover {
+            background-color: $hover-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.about-project {
+    background-color: $milk;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: $default-shadow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    &__title {
+        font-size: $title-size;
+        color: $title-color;
+        font-family: $Ib;
+    }
+
+    &__text {
+        font-size: $sub-subtitle-size;
+        font-family: $Ir;
+        color: $subtitle-color;
+        text-align: center;
+    }
+}
+
+.slider-nav {
+    .slick-list {
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: $yellow-block;
+        box-shadow: $default-shadow;
+        
+        .slick-track {
+            display: flex!important;
+            gap: 10px;
+            padding: 20px 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1308px) {
+    .prev-slide {
+        display: none;
+    }
+
+    .next-slide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1142px) {
+    .container-2 {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .slider-nav .slick-list .slick-track {
+        gap: 5px
+    }
+}
