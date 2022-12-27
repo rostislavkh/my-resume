@@ -39,6 +39,11 @@ class PlatformProvider extends OrchidServiceProvider
                 ->route('platform.systems.users')
                 ->permission('platform.systems.users')
                 ->title('Access rights'),
+
+            Menu::make('Translations')
+                ->icon('globe')
+                ->url('/translations')
+                ->title('Settings'),
         ];
     }
 
