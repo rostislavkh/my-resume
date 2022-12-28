@@ -20,5 +20,5 @@ Route::group(['prefix' => \Mcamara\LaravelLocalization\Facades\LaravelLocalizati
     Route::get('/', [Home::class, 'index'])->name('main');
 
     Route::get('/projects', [ProjectsController::class, 'allProjects'])->name('projects');
-    Route::get('/project', [ProjectsController::class, 'oneProjects'])->name('project');
+    Route::get('/project/{project:slug}', [ProjectsController::class, 'oneProjects'])->name('project');
 });

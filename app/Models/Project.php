@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Orchid\Screen\AsSource;
 use App\Helpers\Translation;
 use Orchid\Filters\Filterable;
@@ -18,6 +19,8 @@ class Project extends Model
     use Attachable;
 
     protected $fillable = [
+        'position',
+        'slug',
         'name',
         'name_uk',
         'description',
@@ -37,6 +40,8 @@ class Project extends Model
      */
     protected $allowedFilters = [
         'id',
+        'position',
+        'slug',
         'name',
         'name_uk',
         'description',
@@ -58,6 +63,8 @@ class Project extends Model
      */
     protected $allowedSorts = [
         'id',
+        'position',
+        'slug',
         'name',
         'name_uk',
         'description',
@@ -71,4 +78,13 @@ class Project extends Model
         'updated_at',
         'created_at'
     ];
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = $value;
+
+        $slug = Str::slug($value);
+
+        $this->attributes['slug'] = $slug;
+    }
 }

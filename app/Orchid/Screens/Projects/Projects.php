@@ -29,7 +29,7 @@ class Projects extends Screen
     public function query(): iterable
     {
         return [
-            'projects' => Project::orderBy('id', 'desc')->get()
+            'projects' => Project::orderBy('position')->get()
         ];
     }
 
@@ -76,12 +76,13 @@ class Projects extends Screen
                                 Switcher::make('is_view_all')->checked()->sendTrueOrFalse()->placeholder('Is view project?'),
                                 Switcher::make('is_view_top')->sendTrueOrFalse()->placeholder('Is view to top project?'),
                             ]),
+                            Input::make('position')->type('number')->value(0)->title('Position')->required(),
                         ]),
                     ],
                     'Card style' => [
                         Layout::rows([
-                            Input::make('background_color')->value('#FBFBFB')->type('color')->title('Background color card'),
-                            Input::make('shadow_color')->type('color')->title('Shadow color card'),
+                            // Input::make('background_color')->value('#FBFBFB')->type('color')->title('Background color card'),
+                            // Input::make('shadow_color')->type('color')->title('Shadow color card'),
                             Input::make('text_color')->value('#4B4B4B')->type('color')->title('Text color card'),
                         ])
                     ]
@@ -100,12 +101,13 @@ class Projects extends Screen
                                 Switcher::make('model.is_view_all')->sendTrueOrFalse()->placeholder('Is view project?'),
                                 Switcher::make('model.is_view_top')->sendTrueOrFalse()->placeholder('Is view to top project?'),
                             ]),
+                            Input::make('model.position')->type('number')->title('Position')->required(),
                         ]),
                     ],
                     'Card style' => [
                         Layout::rows([
-                            Input::make('model.background_color')->type('color')->title('Background color card'),
-                            Input::make('model.shadow_color')->type('color')->title('Shadow color card'),
+                            // Input::make('model.background_color')->type('color')->title('Background color card'),
+                            // Input::make('model.shadow_color')->type('color')->title('Shadow color card'),
                             Input::make('model.text_color')->type('color')->title('Text color card'),
                         ])
                     ]
@@ -127,14 +129,15 @@ class Projects extends Screen
     public function create(Request $request)
     {
         $model = Project::create([
+            'position' => $request->position,
             'name' => $request->name,
             'name_uk' => $request->name_uk,
             'description' => $request->description,
             'description_uk' => $request->description_uk,
             'is_view_all' => $request->is_view_all,
             'is_view_top' => $request->is_view_top,
-            'background_color' => $request->background_color,
-            'shadow_color' => $request->shadow_color,
+            // 'background_color' => $request->background_color,
+            // 'shadow_color' => $request->shadow_color,
             'text_color' => $request->text_color
         ]);
 
@@ -147,14 +150,15 @@ class Projects extends Screen
     public function update(\App\Models\Project $model, Request $request)
     {
         $model->update([
+            'position' => \Illuminate\Support\Arr::get($request->model, 'position', null),
             'name' => \Illuminate\Support\Arr::get($request->model, 'name', null),
             'name_uk' => \Illuminate\Support\Arr::get($request->model, 'name_uk', null),
             'description' => \Illuminate\Support\Arr::get($request->model, 'description', null),
             'description_uk' => \Illuminate\Support\Arr::get($request->model, 'description_uk', null),
             'is_view_all' => \Illuminate\Support\Arr::get($request->model, 'is_view_all', null),
             'is_view_top' => \Illuminate\Support\Arr::get($request->model, 'is_view_top', null),
-            'background_color' => \Illuminate\Support\Arr::get($request->model, 'background_color', null),
-            'shadow_color' => \Illuminate\Support\Arr::get($request->model, 'shadow_color', null),
+            // 'background_color' => \Illuminate\Support\Arr::get($request->model, 'background_color', null),
+            // 'shadow_color' => \Illuminate\Support\Arr::get($request->model, 'shadow_color', null),
             'text_color' => \Illuminate\Support\Arr::get($request->model, 'text_color', null)
         ]);
 

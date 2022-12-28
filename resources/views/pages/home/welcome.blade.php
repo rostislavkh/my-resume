@@ -56,7 +56,7 @@
     </div>
     <div class="container-2">
         <div class="last-projects" data-aos="fade-up" data-aos-delay="100">
-            <span class="last-projects__title" data-aos="fade-right" data-aos-delay="300">Last projects</span>
+            <span class="last-projects__title" data-aos="fade-right" data-aos-delay="300">{{ __('Last projects') }}</span>
             <div class="last-projects__slider-wrapper" data-aos="fade-left" data-aos-delay="300">
                 <svg class="custom-arrow prev-slide" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M62.3021 29.4793H68.847C69.2711 29.4793 69.6154 29.1351 69.6154 28.711C69.6154 28.2869 69.2711 27.9426 68.847 27.9426H62.3021C61.878 27.9426 61.5338 28.2869 61.5338 28.711C61.5338 29.1351 61.878 29.4793 62.3021 29.4793Z" fill="#4B4B4B"/>
@@ -65,51 +65,19 @@
                     <path d="M37.7031 35.7292H64.0009C64.4251 35.7292 64.7693 35.3849 64.7693 34.9608C64.7693 34.5367 64.4251 34.1924 64.0009 34.1924H37.7031C37.2789 34.1924 36.9347 34.5367 36.9347 34.9608C36.9347 35.3849 37.2789 35.7292 37.7031 35.7292Z" fill="#4B4B4B"/>
                 </svg>
                 <div class="last-projects__slider">
-                    <div class="frame">
-                        <a href="#" class="slider__item card">
-                            <img src="/img/avatar.jpg" alt="img" class="item__img">
-                            <span class="item__title">Anti-watse</span>
-                            <div class="item__text">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a...
-                            </div>
-                        </a>
-                    </div>
-                    <div class="frame">
-                        <a href="#" class="slider__item card">
-                            <img src="/img/avatar.jpg" alt="img" class="item__img">
-                            <span class="item__title">Anti-watse</span>
-                            <div class="item__text">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a...
-                            </div>
-                        </a>
-                    </div>
-                    <div class="frame">
-                        <a href="#" class="slider__item card">
-                            <img src="/img/avatar.jpg" alt="img" class="item__img">
-                            <span class="item__title">Anti-watse</span>
-                            <div class="item__text">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a...
-                            </div>
-                        </a>
-                    </div>
-                    <div class="frame">
-                        <a href="#" class="slider__item card">
-                            <img src="/img/avatar.jpg" alt="img" class="item__img">
-                            <span class="item__title">Anti-watse</span>
-                            <div class="item__text">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a...
-                            </div>
-                        </a>
-                    </div>
-                    <div class="frame">
-                        <a href="#" class="slider__item card">
-                            <img src="/img/avatar.jpg" alt="img" class="item__img">
-                            <span class="item__title">Anti-watse</span>
-                            <div class="item__text">
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim a...
-                            </div>
-                        </a>
-                    </div>
+                    @foreach ($projects as $project)
+                        <div class="frame">
+                            <a href="{{ route('project', ['project' => $project->slug]) }}" class="slider__item card">
+                                @if($project->attachment->first())
+                                    <img src="{{ $project->attachment->first()->url() }}" alt="img" class="item__img">
+                                @endif
+                                <span class="item__title">{{ $project->getTranslate('name') }}</span>
+                                <div class="item__text">
+                                    {{ $project->getTranslate('description') }}
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
                 <svg class="custom-arrow next-slide" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.69776 29.4793H1.15288C0.728746 29.4793 0.384521 29.1351 0.384521 28.711C0.384521 28.2869 0.728746 27.9426 1.15288 27.9426H7.69776C8.1219 27.9426 8.46612 28.2869 8.46612 28.711C8.46612 29.1351 8.1219 29.4793 7.69776 29.4793Z" fill="#4B4B4B"/>
@@ -118,7 +86,7 @@
                     <path d="M32.2967 35.7292H5.99883C5.57469 35.7292 5.23047 35.3849 5.23047 34.9608C5.23047 34.5367 5.57469 34.1924 5.99883 34.1924H32.2967C32.7208 34.1924 33.0651 34.5367 33.0651 34.9608C33.0651 35.3849 32.7208 35.7292 32.2967 35.7292Z" fill="#4B4B4B"/>
                 </svg>
             </div>
-            <a href="{{ route('projects') }}" class="link">View all projects</a>
+            <a href="{{ route('projects') }}" class="link">{{ __('View all projects') }}</a>
         </div>
     </div>
 @endsection

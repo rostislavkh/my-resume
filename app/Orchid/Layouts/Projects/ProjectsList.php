@@ -32,6 +32,7 @@ class ProjectsList extends Table
     {
         return [
             TD::make('id', 'ID')->defaultHidden()->sort()->filter(),
+            TD::make('position', 'Position')->sort()->filter(),
             TD::make('img', 'Image')->render(function (Project $model) {
                 return $model->attachment()->first() ? '<img src="' . $model->attachment()->first()->url() .'" alt="img" style="max-height: 100px;" class="mw-100 d-block img-fluid">' : '';
             })->sort()->filter(),
@@ -45,12 +46,12 @@ class ProjectsList extends Table
             TD::make('is_view_top', 'Is view top')->render(function (Project $model) {
                 return Switcher::make()->checked($model->is_view_top ? true : false)->disabled();
             })->sort()->filter(),
-            TD::make('background_color', 'Background color')->render(function (Project $model) {
-                return Input::make()->type('color')->value($model->background_color)->disabled();
-            })->sort()->filter(),
-            TD::make('shadow_color', 'Shadow color')->render(function (Project $model) {
-                return Input::make()->type('color')->value($model->shadow_color)->disabled();
-            })->sort()->filter(),
+            // TD::make('background_color', 'Background color')->render(function (Project $model) {
+            //     return Input::make()->type('color')->value($model->background_color)->disabled();
+            // })->sort()->filter(),
+            // TD::make('shadow_color', 'Shadow color')->render(function (Project $model) {
+            //     return Input::make()->type('color')->value($model->shadow_color)->disabled();
+            // })->sort()->filter(),
             TD::make('text_color', 'Ttext color')->render(function (Project $model) {
                 return Input::make()->type('color')->value($model->text_color)->disabled();
             })->sort()->filter(),
