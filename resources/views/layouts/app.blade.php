@@ -76,6 +76,12 @@
         @yield('content')
     </main>
 
+    <footer>
+        <a class="copyright link" href="{{ __('https://telegram.me/rkhorolkiy') }}">
+            {{ __('Copyright © Rostislav Khorolskiy 2022') }}
+        </a>
+    </footer>
+
     <!-- Scripts -->
     <script src="{{ mix('/js/jquery.js') }}"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
