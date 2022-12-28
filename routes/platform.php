@@ -12,6 +12,7 @@ use App\Orchid\Screens\Examples\ExampleLayoutsScreen;
 use App\Orchid\Screens\Examples\ExampleScreen;
 use App\Orchid\Screens\Examples\ExampleTextEditorsScreen;
 use App\Orchid\Screens\PlatformScreen;
+use App\Orchid\Screens\Projects\Projects;
 use App\Orchid\Screens\Role\RoleEditScreen;
 use App\Orchid\Screens\Role\RoleListScreen;
 use App\Orchid\Screens\Skills\Skills;
@@ -98,3 +99,7 @@ Route::screen('my-skills', Skills::class)
 // About me
 Route::screen('about-me', AboutMe::class)
     ->name('platform.about-me');
+
+// Projects
+Route::screen('projects', Projects::class)
+    ->name('platform.projects');

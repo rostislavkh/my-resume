@@ -36,6 +36,7 @@ class PlatformProvider extends OrchidServiceProvider
                 Menu::make('Skills')->icon('energy')->route('platform.skills'),
                 Menu::make('About me')->icon('book-open')->route('platform.about-me'),
             ]),
+            Menu::make('Projects')->icon('code')->route('platform.projects'),
             Menu::make('Users')
                 ->icon('user')
                 ->route('platform.systems.users')

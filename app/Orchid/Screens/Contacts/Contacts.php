@@ -108,7 +108,7 @@ class Contacts extends Screen
             'href' => \Illuminate\Support\Arr::get($request->model, 'href', null)
         ]);
 
-        Toast::success('Contact was created');
+        Toast::success('Contact was updated');
     }
 
     public function remove(Request $request)
