@@ -167,7 +167,7 @@
 }
 
 .last-projects {
-    background-color: $milk;
+    background-color: $sub-subtitle-color;
     border-radius: 10px;
     box-shadow: $default-shadow;
     display: flex;
@@ -176,7 +176,7 @@
 
     &__title {
         font-size: $title-size;
-        color: $title-color;
+        color: $milk;
         font-family: $Ib;
         display: block;
         margin: 20px auto 8px auto;
@@ -279,8 +279,8 @@
         }
 
         .slider__item {
-            background-color: rgba(97, 140, 53, 1);
-            box-shadow: 0px 0px 10px 1px rgba(97, 140, 53, 1);
+            background-color: $milk;
+            box-shadow: $default-shadow;
             border-radius: 10px;
             padding-bottom: 14px;
             display: flex!important;
@@ -303,18 +303,21 @@
                 width: 100%;
                 height: 215px;
                 object-fit: cover;
+                box-shadow: $default-shadow;
+                margin-bottom: 10px;
+                transform: translateZ(5px);
             }
 
             .item__title {
-                color: $white-text-color;
+                color: $subtitle-color;
                 font-size: $subtitle-size;
                 font-family: $Isb;
-                transform: translateZ(15px);
+                transform: translateZ(13px);
             }
 
             .item__text {
                 font-size: $text-size;
-                color: $white-text-color;
+                color: $text-color;
                 font-family: $Ir;
                 padding: 0 16px;
                 text-align: center;
@@ -325,6 +328,7 @@
 
     .link {
         margin: auto;
+        color: $milk;
     }
 }
 

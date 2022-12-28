@@ -100,7 +100,7 @@
 }
 
 .about-project {
-    background-color: $milk;
+    background-color: $sub-subtitle-color;
     border-radius: 10px;
     padding: 10px;
     box-shadow: $default-shadow;
@@ -113,14 +113,14 @@
 
     &__title {
         font-size: $title-size;
-        color: $title-color;
+        color: $milk;
         font-family: $Ib;
     }
 
     &__text {
         font-size: $sub-subtitle-size;
         font-family: $Ir;
-        color: $subtitle-color;
+        color: $milk;
         text-align: center;
     }
 }
@@ -152,6 +152,7 @@
 
 .container-2 {
     overflow: inherit;
+    max-width: 970px;
 }
 
 
