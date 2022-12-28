@@ -15,7 +15,9 @@ class ProjectsController extends Controller
         ]);
     }
 
-    public function oneProjects() {
-        return view('pages.project.one');
+    public function oneProjects(Project $project) {
+        return view('pages.project.one', [
+            'project' => $project
+        ]);
     }
 }

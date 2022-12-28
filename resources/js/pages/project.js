@@ -10,7 +10,7 @@ $(document).ready(() => {
         autoplaySpeed: 4000,
         centerPadding: '0',
         pauseOnDotsHover: true,
-        asNavFor: '.slider-nav'
+        asNavFor: '.slider-nav',
     });
     $('.slider-nav').slick({
         slidesToShow: 5,
