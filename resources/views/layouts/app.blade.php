@@ -24,8 +24,8 @@
     <header>
         <div class="header" data-aos="fade-down">
             <ul class="desctop-header" data-aos="fade-down">
-                <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">Main</a></li>
-                <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">My projects</a></li>
+                <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">{{ __('Main') }}</a></li>
+                <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">{{ __('My projects') }}</a></li>
                 <li>
                     <div class="drop -color-lighter drop--down">
                         <div class="curr-lang">{{ \Illuminate\Support\Str::upper(\Illuminate\Support\Facades\App::getLocale()) }}</div>
@@ -42,7 +42,7 @@
                 </li>
             </ul>
             <div class="mobile-header" data-aos="fade-down">
-                <a href="/" class="mobile-header__title">Rostislav Khorolskiy</a>
+                <a href="/" class="mobile-header__title">{{ __('Rostislav Khorolskiy') }}</a>
                 <div class="mobile-header__right-block">
                     <div class="mobile-header__lang">
                         <div class="drop -color-lighter drop--down">
@@ -67,8 +67,8 @@
             </div>
         </div>
         <ul class="mobile-header__list">
-            <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">Main</a></li>
-            <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">My projects</a></li>
+            <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">{{ __('Main') }}</a></li>
+            <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">{{ __('My projects') }}</a></li>
         </ul>
     </header>
 
