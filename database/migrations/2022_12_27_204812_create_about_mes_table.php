@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('about_mes', function (Blueprint $table) {
             $table->id();
             $table->string('text');
-            $table->string('text_uk')->nullable();
+            $table->text('text_uk')->nullable();
             $table->timestamps();
         });
     }
