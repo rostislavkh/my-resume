@@ -111,14 +111,15 @@
     </div>
     <div class="container-2" data-aos="fade-up">
         <div class="contact-me">
+            <div class="loader-form"><span>{{ __('Sending...') }}</span></div>
             <div class="contact-me__title">{{ __('Contact me') }}</div>
             <form class="contact-me__form form-ajax" method="POST" action="{{ route('contact-send') }}">
                 @csrf
                 <div class="input" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="200">
-                    <input type="text" name="name" placeholder="placeholder">
+                    <input type="text" name="name" placeholder="placeholder" required>
                     <label for="name">{{ __('Name *') }}</label>
                 </div>
-                <div class="input" data-aos="fade-right" data-aos-offset="-200" data-aos-delay="200">
+                <div class="input" data-aos="fade-right" data-aos-offset="-200" data-aos-delay="200" required>
                     <input type="email" name="email" placeholder="placeholder">
                     <label for="email">{{ __('Email *') }}</label>
                 </div>
@@ -130,7 +131,7 @@
                     <textarea rows="10" name="msg" placeholder="placeholder"></textarea>
                     <label for="msg">{{ __('Message') }}</label>
                 </div>
-                <button type="submit" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="200">{{ __('Send') }}</button>
+                <button type="submit" data-aos="fade-up" data-aos-offset="-200">{{ __('Send') }}</button>
             </form>
         </div>
     </div>

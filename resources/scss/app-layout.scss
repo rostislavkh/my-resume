@@ -263,6 +263,46 @@ footer {
     }
 }
 
+.swal2-title {
+    color: $sub-subtitle-color !important;
+    font-family: $Ib !important;
+    font-size: $title-size !important;
+}
+
+.swal2-html-container {
+    color: $sub-subtitle-color !important;
+    font-family: $Ib !important;
+    font-size: $text-size !important;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: $milk!important;
+    color: $sub-subtitle-color!important;
+    font-family: $Isb!important;
+    font-size: $text-size !important;
+    outline: none !important;
+    border: 2px solid $sub-subtitle-color!important;
+    border-radius: 10px 0!important;
+    box-shadow: $default-shadow!important;
+    transition: .3s !important;
+
+
+    &:focus {
+        box-shadow: $default-shadow !important;
+    }
+
+    &:hover {
+        box-shadow: $default-shadow !important;
+        background-color: $sub-subtitle-color !important;
+        color: $milk !important;
+        transition: .3s !important;
+    }
+}
+
+.swal2-popup {
+    background-color: $milk!important;
+}
+
 
 
 

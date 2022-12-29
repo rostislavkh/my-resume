@@ -245,6 +245,43 @@ footer .copyright {
   font-family: "Inter-SemiBold";
 }
 
+.swal2-title {
+  color: #717171 !important;
+  font-family: "Inter-Bold" !important;
+  font-size: 36px !important;
+}
+
+.swal2-html-container {
+  color: #717171 !important;
+  font-family: "Inter-Bold" !important;
+  font-size: 16px !important;
+}
+
+.swal2-styled.swal2-confirm {
+  background-color: #FBFBFB !important;
+  color: #717171 !important;
+  font-family: "Inter-SemiBold" !important;
+  font-size: 16px !important;
+  outline: none !important;
+  border: 2px solid #717171 !important;
+  border-radius: 10px 0 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  transition: 0.3s !important;
+}
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+.swal2-styled.swal2-confirm:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  background-color: #717171 !important;
+  color: #FBFBFB !important;
+  transition: 0.3s !important;
+}
+
+.swal2-popup {
+  background-color: #FBFBFB !important;
+}
+
 @media screen and (min-width: 425px) {
   .mobile-header {
     display: none;

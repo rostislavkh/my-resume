@@ -33,8 +33,8 @@ class ContactMe extends Controller
                     Notification::send($user, new ContactMeNotify($update['message']['chat']['id'], [
                         'name' => $request->name,
                         'email' => $request->email,
-                        'phone_number' => $request->phone,
-                        'msg' => $request->msg
+                        'phone_number' => $request->phone ? $request->phone : 'Без телефону',
+                        'msg' => $request->msg ? $request->msg : 'Без тексту'
                     ]));
                 }
             }

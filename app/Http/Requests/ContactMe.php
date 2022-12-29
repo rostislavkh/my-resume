@@ -16,8 +16,8 @@ class ContactMe extends FormRequest
         return [
             'name' => 'required|max:100',
             'email' => 'required|email',
-            'phone' => 'string|max:20',
-            'msg' => 'string|max:5000'
+            'phone' => 'string|max:20|nullable',
+            'msg' => 'string|max:5000|nullable'
         ];
     }
 }

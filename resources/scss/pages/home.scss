@@ -347,6 +347,38 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    .loader-form {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(217, 217, 217, 0.1);
+        backdrop-filter: blur(7px);
+        z-index: -1;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+
+        span {
+            display: block;
+            font-size: $title-size;
+            color: $milk;
+            font-family: $Ib;
+            text-shadow: $default-shadow;
+        }
+
+        &.active {
+            opacity: 1;
+            z-index: 200;
+            transition: .3s;
+        }
+    }
 
     &__title {
         color: $milk;

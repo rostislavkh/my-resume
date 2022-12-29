@@ -84,6 +84,12 @@
 
     <!-- Scripts -->
     <script src="{{ mix('/js/jquery.js') }}"></script>
+    {!! '<script>
+        let title = "' . __('Sent') . '";
+        let message = "' . __('I will contact you soon!') . '";
+        let button_text = "' . __('Ok') . '";
+    </script>' !!}
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ mix('/js/default.js') }}"></script>
     <script src="{{ mix('/js/ajax-form.js') }}"></script>
