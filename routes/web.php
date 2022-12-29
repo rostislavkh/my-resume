@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactMe;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\ProjectsController;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,5 @@ Route::group(['prefix' => \Mcamara\LaravelLocalization\Facades\LaravelLocalizati
     Route::get('/projects', [ProjectsController::class, 'allProjects'])->name('projects');
     Route::get('/project/{project:slug}', [ProjectsController::class, 'oneProjects'])->name('project');
 });
+
+Route::post('/send', [ContactMe::class, 'sendMessage'])->name('contact-send');

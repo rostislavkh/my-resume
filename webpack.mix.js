@@ -16,6 +16,7 @@ const mix = require('laravel-mix');
 
 // default
 mix.js('resources/js/default.js', 'js');
+mix.js('resources/js/ajax-form.js', 'js');
 
 // lib
 mix.copy('resources/js/libs/jquery.js', 'public/js');

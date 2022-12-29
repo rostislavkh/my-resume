@@ -112,7 +112,8 @@
     <div class="container-2" data-aos="fade-up">
         <div class="contact-me">
             <div class="contact-me__title">{{ __('Contact me') }}</div>
-            <form class="contact-me__form" action="post">
+            <form class="contact-me__form form-ajax" method="POST" action="{{ route('contact-send') }}">
+                @csrf
                 <div class="input" data-aos="fade-left" data-aos-offset="-135" data-aos-delay="150">
                     <input type="text" name="name" placeholder="placeholder">
                     <label for="name">{{ __('Name *') }}</label>
