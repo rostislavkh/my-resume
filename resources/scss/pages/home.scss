@@ -337,6 +337,113 @@
     z-index: 1;
 }
 
+.contact-me {
+    background-color: $sub-subtitle-color;
+    box-shadow: $default-shadow;
+    width: 100%;
+    padding: 20px 10px 60px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        color: $milk;
+        font-family: $Ib;
+        font-size: $title-size;
+        margin-bottom: 60px;
+    }
+
+    &__form {
+        max-width: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+
+        .input {
+            width: 100%;
+            height: 40px;
+            position: relative;
+
+            label, input, textarea {
+                left: 0;
+                position: absolute;
+                color: $milk;
+                transition: .3s;
+            }
+
+            input, textarea {
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: 2px solid $milk;
+                background: none;
+                font-family: $Ir;
+                font-size: $sub-subtitle-size;
+
+                &::placeholder {
+                    font-size: 0;
+                }
+
+                &:focus, &:not(:placeholder-shown) {
+                    ~ label {
+                        color: $hover-color;
+                        font-size: $sub-subtitle-size;
+                        bottom: auto;
+                        top: -20px;
+                        left: 0;
+                        transition: .3s;
+                    }
+                    outline: none;
+                    border-color: $hover-color;
+                    transition: .3s;
+                }
+            }
+
+            textarea {
+                height: 200%;
+            }
+
+            label {
+                pointer-events: none;
+                top: -5px;
+                left: 5px;
+                font-family: $Isb;
+                font-size: $subtitle-size;
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 60px;
+            border: 2px solid $milk;
+            border-radius: 10px 0;
+            background-color: $sub-subtitle-color;
+            font-size: $subtitle-size;
+            color: $milk;
+            box-shadow: $default-shadow;
+            margin-top: 20px;
+            transition: .3s;
+
+
+            &:hover {
+                cursor: pointer;
+                transition: .3s;
+                background-color: $milk;
+                border-color: $title-color;
+                color: $title-color;
+            }
+        }
+    }
+}
+
 
 
 
@@ -364,7 +471,7 @@
 }
 
 @media screen and (max-width: 1142px) {
-    .last-projects {
+    .last-projects, .contact-me {
         border-radius: 0;
 
         &__slider-wrapper {
