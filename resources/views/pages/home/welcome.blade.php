@@ -51,7 +51,7 @@
         </div>
         <div class="about-me" data-aos="fade-up">
             <span class="about-me__title" data-aos="fade-left" data-aos-delay="200">{{ __('About me') }}</span>
-            <div class="about-me__text" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-me__text about-text" data-aos="fade-right" data-aos-delay="200">
                 {!! $about_me->getTranslate('text') !!}
             </div>
         </div>

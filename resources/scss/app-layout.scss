@@ -313,6 +313,45 @@ footer {
     background-color: $biege!important;
 }
 
+.about-text {
+    p.ql-align-center {
+        text-align: center;
+    }
+
+    strong, p strong {
+        font-family: $Ib;
+    }
+
+    a, p a {
+        color: $text-color;
+        font-size: $text-size;
+        font-family: $Ir;
+        position: relative;
+        transition: .3s;
+    
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $text-color;
+            box-shadow: $link-shadow;
+            width: 0;
+            height: 2px;
+            border-radius: 2px;
+            bottom: -3px;
+            left: 0;
+        }
+    
+        &:hover {
+            color: $title-color;
+    
+            &::after {
+                transition: .3s;
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 
 
