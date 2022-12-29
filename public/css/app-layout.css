@@ -268,7 +268,7 @@ footer .copyright {
 }
 
 .swal2-styled.swal2-confirm {
-  background-color: #FBFBFB !important;
+  background-color: #F5EDCE !important;
   color: #717171 !important;
   font-family: "Inter-SemiBold" !important;
   font-size: 16px !important;
@@ -289,7 +289,7 @@ footer .copyright {
 }
 
 .swal2-popup {
-  background-color: #FBFBFB !important;
+  background-color: #F5EDCE !important;
 }
 
 @media screen and (min-width: 425px) {

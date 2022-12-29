@@ -6,17 +6,21 @@
     <link href="{{ mix('/css/project.css') }}" rel="stylesheet">
 @endsection
 
-@section('script')
+{{-- @section('script')
     <script src="{{ mix('js/slick.js') }}"></script>
     <script src="{{ mix('js/project.js') }}"></script>
-@endsection
+@endsection --}}
 
 
 
 @section('content')
     <div class="container-2">
+        <div class="about-project" data-aos="fade-up" data-aos-delay="200">
         @if($project->attachment->first())
-            <div class="wrapper" data-aos="fade-down" data-aos-delay="200">
+            <div class="titule">
+                <img src="{{ $project->attachment->first()->url() }}" alt="img" />
+            </div>
+            {{-- <div class="wrapper" data-aos="fade-down" data-aos-delay="200">
                 <svg class="custom-arrow prev-slide" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M62.3021 29.4793H68.847C69.2711 29.4793 69.6154 29.1351 69.6154 28.711C69.6154 28.2869 69.2711 27.9426 68.847 27.9426H62.3021C61.878 27.9426 61.5338 28.2869 61.5338 28.711C61.5338 29.1351 61.878 29.4793 62.3021 29.4793Z" fill="#4B4B4B"/>
                     <path d="M25.1489 59.6928C25.6122 59.6928 26.0755 59.5168 26.4282 59.1641L33.7945 51.7979C34.4998 51.091 34.4998 49.9431 33.7945 49.2377L26.5358 41.979H47.1939C47.618 41.979 47.9622 41.6355 47.9622 41.2106C47.9622 40.7857 47.618 40.4423 47.1939 40.4423H24.6802C24.3698 40.4423 24.0886 40.629 23.9702 40.9164C23.8511 41.2037 23.9172 41.5341 24.137 41.7539L32.708 50.3242C32.8148 50.431 32.8148 50.6046 32.7072 50.7122L25.3425 58.0769C25.2357 58.1845 25.0621 58.1837 24.9553 58.0769L2.07351 35.1944C2.00897 35.1299 1.99745 35.0476 1.99975 34.99C1.99745 34.8748 2.00897 34.7925 2.07351 34.728L24.9553 11.8455C25.0943 11.7072 25.2019 11.7041 25.3425 11.8455L32.708 19.2102C32.8148 19.317 32.8148 19.4907 32.708 19.5975L24.1377 28.167C23.918 28.3867 23.8519 28.7171 23.971 29.0045C24.0893 29.2919 24.3705 29.4786 24.681 29.4786H55.5229C55.947 29.4786 56.2913 29.1343 56.2913 28.7102C56.2913 28.2861 55.947 27.9419 55.5229 27.9419H26.535L33.7937 20.6832C34.4991 19.977 34.4991 18.8283 33.7937 18.123L26.4282 10.7575C25.7428 10.0729 24.5503 10.0737 23.868 10.7575L0.986286 33.6392C0.629768 33.995 0.444588 34.4744 0.463799 34.9877C0.444588 35.4433 0.629768 35.922 0.986286 36.2785L23.868 59.1611C24.2215 59.516 24.6848 59.6928 25.1489 59.6928Z" fill="#4B4B4B"/>
@@ -36,18 +40,29 @@
                     <path d="M16.4141 41.979H10.0406C9.61644 41.979 9.27222 41.6355 9.27222 41.2106C9.27222 40.7857 9.61644 40.4423 10.0406 40.4423H16.4141C16.8383 40.4423 17.1825 40.7857 17.1825 41.2106C17.1825 41.6355 16.8383 41.979 16.4141 41.979Z" fill="#4B4B4B"/>
                     <path d="M32.2967 35.7292H5.99883C5.57469 35.7292 5.23047 35.3849 5.23047 34.9608C5.23047 34.5367 5.57469 34.1924 5.99883 34.1924H32.2967C32.7208 34.1924 33.0651 34.5367 33.0651 34.9608C33.0651 35.3849 32.7208 35.7292 32.2967 35.7292Z" fill="#4B4B4B"/>
                 </svg>
-            </div>
-            <div class="slider-nav" data-aos="fade-down" data-aos-delay="200">
+            </div> --}}
+            {{-- <div class="slider-nav" data-aos="fade-down" data-aos-delay="200">
                 @foreach ($project->attachment as $img)
                     <div class="slider__item">
                         <img src="{{ $img->url() }}" alt="img" />
                     </div>
                 @endforeach
-            </div>
+            </div> --}}
         @endif
-        <div class="about-project">
             <div class="about-project__title">{{ $project->getTranslate('name') }}</div>
             <div class="about-project__text">{{ $project->getTranslate('description') }}</div>
+        </div>
+        <img class="scroll-img" src="/img/scroll.gif" />
+        <div class="images">
+            @php
+                $i = 0;
+            @endphp
+            @foreach ($project->attachment as $img)
+                <img src="{{ $img->url() }}" data-aos="{{ $i % 2 === 0 ? 'fade-up-left' : 'fade-up-right' }}" data-aos-delay="200" alt="img" />
+                @php
+                    $i++;
+                @endphp
+            @endforeach
         </div>
     </div>
 @endsection

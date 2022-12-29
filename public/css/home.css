@@ -165,7 +165,7 @@
 }
 
 .last-projects {
-  background-color: #717171;
+  background-color: #F5EDCE;
   border-radius: 10px 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -174,7 +174,7 @@
 }
 .last-projects__title {
   font-size: 36px;
-  color: #FBFBFB;
+  color: #4B4B4B;
   font-family: "Inter-Bold";
   display: block;
   margin: 20px auto 8px auto;
@@ -305,7 +305,6 @@
 }
 .last-projects .link {
   margin: auto;
-  color: #FBFBFB;
 }
 
 .slick-track {
@@ -314,7 +313,7 @@
 }
 
 .contact-me {
-  background-color: #717171;
+  background-color: #F5EDCE;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
   padding: 20px 10px 60px 10px;
@@ -345,7 +344,7 @@
 .contact-me .loader-form span {
   display: block;
   font-size: 36px;
-  color: #FBFBFB;
+  color: #4B4B4B;
   font-family: "Inter-Bold";
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -355,7 +354,7 @@
   transition: 0.3s;
 }
 .contact-me__title {
-  color: #FBFBFB;
+  color: #4B4B4B;
   font-family: "Inter-Bold";
   font-size: 36px;
   margin-bottom: 60px;
@@ -383,15 +382,15 @@
 .contact-me__form .input select:-webkit-autofill,
 .contact-me__form .input select:-webkit-autofill:hover,
 .contact-me__form .input select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #FBFBFB;
-  -webkit-box-shadow: inset 0 0 0 50px #717171;
+  -webkit-text-fill-color: #717171;
+  -webkit-box-shadow: inset 0 0 0 50px #F5EDCE;
   -webkit-transition: 0;
   transition: 0;
 }
 .contact-me__form .input label, .contact-me__form .input input, .contact-me__form .input textarea {
   left: 0;
   position: absolute;
-  color: #FBFBFB;
+  color: #717171;
   transition: 0.3s;
 }
 .contact-me__form .input input, .contact-me__form .input textarea {
@@ -401,7 +400,7 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 2px solid #FBFBFB;
+  border-bottom: 2px solid #717171;
   background: none;
   font-family: "Inter-Regular";
   font-size: 20px;
@@ -453,11 +452,11 @@
 .contact-me__form button {
   width: 100%;
   height: 60px;
-  border: 2px solid #FBFBFB;
+  border: 2px solid #717171;
   border-radius: 10px 0;
-  background-color: #717171;
+  background-color: #F5EDCE;
   font-size: 24px;
-  color: #FBFBFB;
+  color: #717171;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
   transition: 0.3s;
@@ -465,7 +464,7 @@
 .contact-me__form button:hover {
   cursor: pointer;
   transition: 0.3s;
-  background-color: #FBFBFB;
+  background-color: #B0BFF7;
   border-color: #4B4B4B;
   color: #4B4B4B;
 }
