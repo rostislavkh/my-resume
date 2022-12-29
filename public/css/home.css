@@ -344,6 +344,20 @@
   height: 40px;
   position: relative;
 }
+.contact-me__form .input input:-webkit-autofill,
+.contact-me__form .input input:-webkit-autofill:hover,
+.contact-me__form .input input:-webkit-autofill:focus,
+.contact-me__form .input textarea:-webkit-autofill,
+.contact-me__form .input textarea:-webkit-autofill:hover,
+.contact-me__form .input textarea:-webkit-autofill:focus,
+.contact-me__form .input select:-webkit-autofill,
+.contact-me__form .input select:-webkit-autofill:hover,
+.contact-me__form .input select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #FBFBFB;
+  -webkit-box-shadow: inset 0 0 0 50px #717171;
+  -webkit-transition: 0;
+  transition: 0;
+}
 .contact-me__form .input label, .contact-me__form .input input, .contact-me__form .input textarea {
   left: 0;
   position: absolute;

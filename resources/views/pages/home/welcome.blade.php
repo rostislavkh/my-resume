@@ -114,23 +114,23 @@
             <div class="contact-me__title">{{ __('Contact me') }}</div>
             <form class="contact-me__form form-ajax" method="POST" action="{{ route('contact-send') }}">
                 @csrf
-                <div class="input" data-aos="fade-left" data-aos-offset="-135" data-aos-delay="150">
+                <div class="input" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="200">
                     <input type="text" name="name" placeholder="placeholder">
                     <label for="name">{{ __('Name *') }}</label>
                 </div>
-                <div class="input" data-aos="fade-right" data-aos-offset="-135" data-aos-delay="150">
+                <div class="input" data-aos="fade-right" data-aos-offset="-200" data-aos-delay="200">
                     <input type="email" name="email" placeholder="placeholder">
                     <label for="email">{{ __('Email *') }}</label>
                 </div>
-                <div class="input" data-aos="fade-left" data-aos-offset="-135" data-aos-delay="150">
+                <div class="input" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="200">
                     <input type="tel" name="phone" placeholder="placeholder">
                     <label for="phone">{{ __('Phone number') }}</label>
                 </div>
-                <div class="input" data-aos="fade-right" data-aos-offset="-135" data-aos-delay="150">
+                <div class="input" data-aos="fade-right" data-aos-offset="-200" data-aos-delay="200">
                     <textarea rows="10" name="msg" placeholder="placeholder"></textarea>
                     <label for="msg">{{ __('Message') }}</label>
                 </div>
-                <button type="submit" data-aos="fade-left" data-aos-offset="-135" data-aos-delay="150">{{ __('Send') }}</button>
+                <button type="submit" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="200">{{ __('Send') }}</button>
             </form>
         </div>
     </div>
