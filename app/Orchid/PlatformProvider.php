@@ -37,6 +37,7 @@ class PlatformProvider extends OrchidServiceProvider
                 Menu::make('About me')->icon('book-open')->route('platform.about-me'),
             ]),
             Menu::make('Projects')->icon('code')->route('platform.projects'),
+            Menu::make('Contact me requests')->icon('earphones-alt')->route('platform.contact-me'),
             Menu::make('Users')
                 ->icon('user')
                 ->route('platform.systems.users')

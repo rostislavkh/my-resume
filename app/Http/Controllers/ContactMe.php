@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Notifications\ContactMeNotify;
+use App\Notifications\NewRequest;
 use Illuminate\Support\Facades\Notification;
 use NotificationChannels\Telegram\TelegramUpdates;
 use App\Http\Requests\ContactMe as RequestsContactMe;
+use App\Models\ContactMe as ModelsContactMe;
 use Exception;
 
 class ContactMe extends Controller
@@ -14,6 +16,15 @@ class ContactMe extends Controller
     public function sendMessage (RequestsContactMe $request) {
         try {
             $user = User::find(1);
+
+            Notification::send($user, new NewRequest());
+
+            ModelsContactMe::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone_number' => $request->phone ? $request->phone : 'Без телефону',
+                'msg' => $request->msg ? $request->msg : 'Без тексту'
+            ]);
 
             $updates = TelegramUpdates::create()
                 // (Optional). Get's the latest update. NOTE: All previous updates will be forgotten using this method.

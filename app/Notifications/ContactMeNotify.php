@@ -4,8 +4,6 @@ namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 use NotificationChannels\Telegram\TelegramMessage;
 
 class ContactMeNotify extends Notification
@@ -68,17 +66,4 @@ class ContactMeNotify extends Notification
             ->line('Слава ЗСУ та всім хто боронить Україну!!! 💪😎🇺🇦')
             ->button('Перейти до адмін панелі', route('platform.main'));
     }
-
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
-    // public function toArray($notifiable)
-    // {
-    //     return [
-    //         //
-    //     ];
-    // }
 }

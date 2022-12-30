@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Orchid\Screens\AboutMe\AboutMe;
+use App\Orchid\Screens\ContactMe\ContactMe;
 use App\Orchid\Screens\Contacts\Contacts;
 use App\Orchid\Screens\Examples\ExampleCardsScreen;
 use App\Orchid\Screens\Examples\ExampleChartsScreen;
@@ -103,3 +104,7 @@ Route::screen('about-me', AboutMe::class)
 // Projects
 Route::screen('projects', Projects::class)
     ->name('platform.projects');
+
+// Projects
+Route::screen('contact-me', ContactMe::class)
+    ->name('platform.contact-me');
