@@ -122,7 +122,6 @@
         font-size: $sub-subtitle-size;
         font-family: $Ir;
         color: $text-color;
-        text-align: center;
     }
 }
 
@@ -164,7 +163,7 @@
 
 .titule img {
     max-width: 100%;
-    max-height: 400px;
+    // max-height: 400px;
     border-radius: 10px;
     box-shadow: $default-shadow;
 }
@@ -231,15 +230,12 @@
     .about-project {
         &__title {
             font-size: $subtitle-size;
-            color: $milk;
             font-family: $Ib;
         }
 
         &__text {
             font-size: $text-size;
             font-family: $Ir;
-            color: $milk;
-            text-align: center;
         }
     }
 }

@@ -83,8 +83,8 @@
                                     <img src="{{ $project->attachment->first()->url() }}" alt="img" class="item__img">
                                 @endif
                                 <span class="item__title">{{ $project->getTranslate('name') }}</span>
-                                <div class="item__text">
-                                    {{ $project->getTranslate('description') }}
+                                <div class="item__text about-text">
+                                    {{  $project->getTranslate('short_desc')  }}...
                                 </div>
                             </a>
                         </div>

@@ -50,7 +50,7 @@
             </div> --}}
         @endif
             <div class="about-project__title">{{ $project->getTranslate('name') }}</div>
-            <div class="about-project__text">{{ $project->getTranslate('description') }}</div>
+            <div class="about-project__text about-text">{!! $project->getTranslate('description') !!}</div>
         </div>
         <img class="scroll-img" src="/img/scroll.gif" />
         <div class="images">
@@ -58,7 +58,9 @@
                 $i = 0;
             @endphp
             @foreach ($project->attachment as $img)
-                <img src="{{ $img->url() }}" data-aos="{{ $i % 2 === 0 ? 'fade-up-left' : 'fade-up-right' }}" data-aos-delay="200" alt="img" />
+                @if($i != 0)
+                    <img src="{{ $img->url() }}" data-aos="{{ $i % 2 === 0 ? 'fade-up-right' : 'fade-up-left' }}" data-aos-delay="200" alt="img" />
+                @endif
                 @php
                     $i++;
                 @endphp

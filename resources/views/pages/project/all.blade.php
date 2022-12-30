@@ -17,7 +17,7 @@
                         @endif
                         <span class="title" style="color: {{ $project->text_color }};">{{ $project->getTranslate('name') }}</span>
                     </div>
-                    <div class="text">{{ $project->getTranslate('description') }}</div>
+                    <div class="text">{{ $project->getTranslate('short_desc') }}</div>
                     <a href="{{ route('project', ['project' => $project->slug]) }}" class="more-link">{{ __('More') }}</a>
                 </div>
             @endforeach

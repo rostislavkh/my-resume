@@ -38,6 +38,8 @@ class ProjectsList extends Table
             })->sort()->filter(),
             TD::make('name', 'Name')->sort()->filter(),
             TD::make('name_uk', 'Name [Ukraine lang]')->sort()->filter(),
+            TD::make('short_desc', 'Short description')->sort()->filter(),
+            TD::make('short_desc_uk', 'Short description [Ukraine lang]')->sort()->filter(),
             TD::make('description', 'Description')->sort()->filter(),
             TD::make('description_uk', 'Description [Ukraine lang]')->sort()->filter(),
             TD::make('is_view_all', 'Is view all')->render(function (Project $model) {
