@@ -68,8 +68,8 @@ class Projects extends Screen
                     'Projects info' => [
                         Layout::rows([
                             Upload::make('attachment')->groups('photo')->title('Images')->required(),
-                            Input::make('name')->title('Name')->required(),
-                            Input::make('name_uk')->title('Name [Ukraine lang]'),
+                            Input::make('name')->maxlength(100)->title('Name')->required(),
+                            Input::make('name_uk')->maxlength(100)->title('Name [Ukraine lang]'),
                             Input::make('short_desc')->maxlength(100)->title('Short description'),
                             Input::make('short_desc_uk')->maxlength(100)->title('Short description [Ukraine lang]'),
                             Quill::make('description')->title('Description')->required(),
@@ -95,8 +95,8 @@ class Projects extends Screen
                     'Projects info' => [
                         Layout::rows([
                             Upload::make('model.attachment')->groups('photo')->title('Images')->required(),
-                            Input::make('model.name')->title('Name')->required(),
-                            Input::make('model.name_uk')->title('Name [Ukraine lang]'),
+                            Input::make('model.name')->maxlength(100)->title('Name')->required(),
+                            Input::make('model.name_uk')->maxlength(100)->title('Name [Ukraine lang]'),
                             Input::make('model.short_desc')->maxlength(100)->title('Short description'),
                             Input::make('model.short_desc_uk')->maxlength(100)->title('Short description [Ukraine lang]'),
                             Quill::make('model.description')->title('Description'),
