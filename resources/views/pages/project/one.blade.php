@@ -15,7 +15,7 @@
 
 @section('content')
     <div class="container-2">
-        <div class="about-project">
+        <div class="about-project" data-aos="zoom-in-down">
         @if($project->attachment->first())
             <div class="titule">
                 <img src="{{ $project->attachment->first()->url() }}" alt="img" />

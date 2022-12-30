@@ -12,18 +12,18 @@
 @endsection
 
 
-
+{{-- animated animated__fade-right --}}
 @section('content')
-    <div class="container">
+    <div class="container o-h">
         <div class="row">
             <div class="my-contacts">
-                <div class="my-contacts__avatar">
+                <div class="my-contacts__avatar animated animated__fade-right">
                     @if ($avatar)
                         <img src="{{ $avatar }}" alt="avatar">
                     @endif
                 </div>
-                <span class="my-contacts__title">{{ __('My contacts') }}</span>
-                <ul class="my-contacts__list">
+                <span class="my-contacts__title animated animated__fade-left">{{ __('My contacts') }}</span>
+                <ul class="my-contacts__list animated animated__fade-right">
                     @foreach ($contacts as $contact)
                         <li>{{ $contact->getTranslate('name') }}: <a class="link" href="{{ $contact->href }}"
                                 target="_blank">{{ $contact->getTranslate('text_link') }}</a></li>
@@ -31,10 +31,10 @@
                 </ul>
             </div>
             <div class="my-skills">
-                <span class="my-skills__title">{{ __('My skills') }}</span>
+                <span class="my-skills__title animated animated__fade-up">{{ __('My skills') }}</span>
                 <div class="my-skills__cards">
                     @foreach (\App\Models\Skills::TYPES as $type)
-                        <div class="my-skills__card">
+                        <div class="my-skills__card animated animated__fade-up no-rep">
                             <span class="my-skills__card-title">{{ __($type) }}</span>
                             <ul class="my-skills__list">
                                 @foreach ($skills as $skill)
@@ -49,15 +49,15 @@
                 </div>
             </div>
         </div>
-        <div class="about-me">
+        <div class="about-me animated animated__fade-right">
             <span class="about-me__title">{{ __('About me') }}</span>
             <div class="about-me__text about-text">
                 {!! $about_me->getTranslate('text') !!}
             </div>
         </div>
     </div>
-    <div class="container-2">
-        <div class="last-projects">
+    <div class="container-2 o-h">
+        <div class="last-projects animated animated__fade-left">
             <span class="last-projects__title">{{ __('Last projects') }}</span>
             <div class="last-projects__slider-wrapper">
                 <svg class="custom-arrow prev-slide" width="70" height="70" viewBox="0 0 70 70" fill="none"
@@ -109,29 +109,29 @@
             <a href="{{ route('projects') }}" class="link">{{ __('View all projects') }}</a>
         </div>
     </div>
-    <div class="container-2">
+    <div class="container-2 o-h">
         <div class="contact-me">
             <div class="loader-form"><span>{{ __('Sending...') }}</span></div>
-            <div class="contact-me__title">{{ __('Contact me') }}</div>
+            <div class="contact-me__title animated animated__fade-down">{{ __('Contact me') }}</div>
             <form class="contact-me__form form-ajax" method="POST" action="{{ route('contact-send') }}">
                 @csrf
-                <div class="input">
+                <div class="input animated animated__fade-right">
                     <input type="text" name="name" placeholder="placeholder" required>
                     <label for="name">{{ __('Name *') }}</label>
                 </div>
-                <div class="input" required>
+                <div class="input animated animated__fade-left" required>
                     <input type="email" name="email" placeholder="placeholder">
                     <label for="email">{{ __('Email *') }}</label>
                 </div>
-                <div class="input">
+                <div class="input animated animated__fade-right">
                     <input type="tel" name="phone" placeholder="placeholder">
                     <label for="phone">{{ __('Phone number') }}</label>
                 </div>
-                <div class="input">
+                <div class="input animated animated__fade-left">
                     <textarea rows="10" name="msg" placeholder="placeholder"></textarea>
                     <label for="msg">{{ __('Message') }}</label>
                 </div>
-                <button type="submit">{{ __('Send') }}</button>
+                <button class="animated animated__fade-up" type="submit">{{ __('Send') }}</button>
             </form>
         </div>
     </div>

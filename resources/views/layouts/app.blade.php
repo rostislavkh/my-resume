@@ -13,6 +13,7 @@
     <!-- Fonts -->
 
     <!-- Styles -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/all-lib.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/app-layout.css') }}" rel="stylesheet">
@@ -21,7 +22,7 @@
 
 <body>
     <header>
-        <div class="header" >
+        <div class="header" data-aos="fade-down">
             <ul class="desctop-header">
                 <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">{{ __('Main') }}</a></li>
                 <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">{{ __('My projects') }}</a></li>
@@ -83,6 +84,11 @@
 
     <!-- Scripts -->
     <script src="{{ mix('/js/jquery.js') }}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="{{ mix('/js/animations.js') }}"></script>
     {!! '<script>
         let title = "' . __('Sent') . '";
         let message = "' . __('I will contact you soon!') . '";
