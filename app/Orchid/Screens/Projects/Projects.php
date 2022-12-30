@@ -76,7 +76,7 @@ class Projects extends Screen
                             Quill::make('description_uk')->title('Description [Ukraine lang]'),
                             Group::make([
                                 Switcher::make('is_view_all')->checked()->sendTrueOrFalse()->placeholder('Is view project?'),
-                                Switcher::make('is_view_top')->sendTrueOrFalse()->placeholder('Is view to top project?'),
+                                Switcher::make('is_view_top')->sendTrueOrFalse()->placeholder('Is view to last project?'),
                             ]),
                             Input::make('position')->type('number')->value(0)->title('Position')->required(),
                         ]),
@@ -103,7 +103,7 @@ class Projects extends Screen
                             Quill::make('model.description_uk')->title('Description [Ukraine lang]'),
                             Group::make([
                                 Switcher::make('model.is_view_all')->sendTrueOrFalse()->placeholder('Is view project?'),
-                                Switcher::make('model.is_view_top')->sendTrueOrFalse()->placeholder('Is view to top project?'),
+                                Switcher::make('model.is_view_top')->sendTrueOrFalse()->placeholder('Is view to last project?'),
                             ]),
                             Input::make('model.position')->type('number')->title('Position')->required(),
                         ]),

@@ -54,7 +54,7 @@ class ProjectsList extends Table
             // TD::make('shadow_color', 'Shadow color')->render(function (Project $model) {
             //     return Input::make()->type('color')->value($model->shadow_color)->disabled();
             // })->sort()->filter(),
-            TD::make('text_color', 'Ttext color')->render(function (Project $model) {
+            TD::make('text_color', 'Text color')->render(function (Project $model) {
                 return Input::make()->type('color')->value($model->text_color)->disabled();
             })->sort()->filter(),
             TD::make('actions', 'Actions')->render(function (Project $model) {
