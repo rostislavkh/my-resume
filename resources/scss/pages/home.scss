@@ -40,7 +40,7 @@
             transition: .5s;
         }
 
-        &:hover, img:hover {
+        &:hover img, &:hover {
             border-radius: 10px;
             transition: .5s;
         }
@@ -84,7 +84,6 @@
     gap: 24px;
     align-items: center;
     width: 100%;
-    overflow: hidden;
 
 
     &__title {
@@ -149,7 +148,6 @@
     flex-direction: column;
     gap: 10px;
     padding: 19px 63px 31px 63px;
-    overflow: hidden;
 
     &__title {
         font-size: $title-size;
@@ -324,7 +322,6 @@
                 text-align: center;
                 transform: translateZ(10px);
                 max-width: 100%;
-                // overflow: hidden;
             }
         }
     }
@@ -350,7 +347,6 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
 
     .loader-form {
         position: absolute;

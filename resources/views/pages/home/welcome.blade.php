@@ -17,13 +17,13 @@
     <div class="container">
         <div class="row">
             <div class="my-contacts">
-                <div class="my-contacts__avatar" data-aos="fade-right">
+                <div class="my-contacts__avatar">
                     @if ($avatar)
                         <img src="{{ $avatar }}" alt="avatar">
                     @endif
                 </div>
-                <span class="my-contacts__title" data-aos="fade-right" data-aos-delay="200">{{ __('My contacts') }}</span>
-                <ul class="my-contacts__list" data-aos="fade-left" data-aos-delay="200">
+                <span class="my-contacts__title">{{ __('My contacts') }}</span>
+                <ul class="my-contacts__list">
                     @foreach ($contacts as $contact)
                         <li>{{ $contact->getTranslate('name') }}: <a class="link" href="{{ $contact->href }}"
                                 target="_blank">{{ $contact->getTranslate('text_link') }}</a></li>
@@ -31,10 +31,10 @@
                 </ul>
             </div>
             <div class="my-skills">
-                <span class="my-skills__title" data-aos="fade-left" data-aos-delay="200">{{ __('My skills') }}</span>
-                <div class="my-skills__cards" data-aos="fade-up" data-aos-delay="100">
+                <span class="my-skills__title">{{ __('My skills') }}</span>
+                <div class="my-skills__cards">
                     @foreach (\App\Models\Skills::TYPES as $type)
-                        <div class="my-skills__card" data-aos="fade-up">
+                        <div class="my-skills__card">
                             <span class="my-skills__card-title">{{ __($type) }}</span>
                             <ul class="my-skills__list">
                                 @foreach ($skills as $skill)
@@ -49,17 +49,17 @@
                 </div>
             </div>
         </div>
-        <div class="about-me" data-aos="fade-up">
-            <span class="about-me__title" data-aos="fade-left" data-aos-delay="200">{{ __('About me') }}</span>
-            <div class="about-me__text about-text" data-aos="fade-right" data-aos-delay="200">
+        <div class="about-me">
+            <span class="about-me__title">{{ __('About me') }}</span>
+            <div class="about-me__text about-text">
                 {!! $about_me->getTranslate('text') !!}
             </div>
         </div>
     </div>
-    <div class="container-2" data-aos="fade-up">
-        <div class="last-projects" data-aos="fade-up" data-aos-delay="100">
-            <span class="last-projects__title" data-aos="fade-right" data-aos-delay="300">{{ __('Last projects') }}</span>
-            <div class="last-projects__slider-wrapper" data-aos="fade-left" data-aos-delay="300">
+    <div class="container-2">
+        <div class="last-projects">
+            <span class="last-projects__title">{{ __('Last projects') }}</span>
+            <div class="last-projects__slider-wrapper">
                 <svg class="custom-arrow prev-slide" width="70" height="70" viewBox="0 0 70 70" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -109,29 +109,29 @@
             <a href="{{ route('projects') }}" class="link">{{ __('View all projects') }}</a>
         </div>
     </div>
-    <div class="container-2" data-aos="fade-up">
+    <div class="container-2">
         <div class="contact-me">
             <div class="loader-form"><span>{{ __('Sending...') }}</span></div>
             <div class="contact-me__title">{{ __('Contact me') }}</div>
             <form class="contact-me__form form-ajax" method="POST" action="{{ route('contact-send') }}">
                 @csrf
-                <div class="input" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="200">
+                <div class="input">
                     <input type="text" name="name" placeholder="placeholder" required>
                     <label for="name">{{ __('Name *') }}</label>
                 </div>
-                <div class="input" data-aos="fade-right" data-aos-offset="-200" data-aos-delay="200" required>
+                <div class="input" required>
                     <input type="email" name="email" placeholder="placeholder">
                     <label for="email">{{ __('Email *') }}</label>
                 </div>
-                <div class="input" data-aos="fade-left" data-aos-offset="-200" data-aos-delay="200">
+                <div class="input">
                     <input type="tel" name="phone" placeholder="placeholder">
                     <label for="phone">{{ __('Phone number') }}</label>
                 </div>
-                <div class="input" data-aos="fade-right" data-aos-offset="-200" data-aos-delay="200">
+                <div class="input">
                     <textarea rows="10" name="msg" placeholder="placeholder"></textarea>
                     <label for="msg">{{ __('Message') }}</label>
                 </div>
-                <button type="submit" data-aos="fade-up" data-aos-offset="-200">{{ __('Send') }}</button>
+                <button type="submit">{{ __('Send') }}</button>
             </form>
         </div>
     </div>

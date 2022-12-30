@@ -17,10 +17,6 @@ $('.next-slide').click(function () {
 $('.prev-slide').click(function () {
   $('.slick-prev').click();
 });
-AOS.init({
-  duration: 600,
-  offset: 50
-});
 $(document).ready(function () {
   $('body,html').animate({
     scrollTop: 0

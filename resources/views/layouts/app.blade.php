@@ -13,7 +13,6 @@
     <!-- Fonts -->
 
     <!-- Styles -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/all-lib.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/app-layout.css') }}" rel="stylesheet">
@@ -22,8 +21,8 @@
 
 <body>
     <header>
-        <div class="header" data-aos="fade-down">
-            <ul class="desctop-header" data-aos="fade-down">
+        <div class="header" >
+            <ul class="desctop-header">
                 <li><a href="{{ route('main') }}" class="{{ \Request::route()->getName() == 'main' ? 'active' : '' }}">{{ __('Main') }}</a></li>
                 <li><a href="{{ route('projects') }}" class="{{ \Request::route()->getName() == 'projects' ? 'active' : '' }}">{{ __('My projects') }}</a></li>
                 <li>
@@ -41,7 +40,7 @@
                     </div>
                 </li>
             </ul>
-            <div class="mobile-header" data-aos="fade-down">
+            <div class="mobile-header">
                 <a href="/" class="mobile-header__title">{{ __('Rostislav Khorolskiy') }}</a>
                 <div class="mobile-header__right-block">
                     <div class="mobile-header__lang">
@@ -90,7 +89,6 @@
         let button_text = "' . __('Ok') . '";
     </script>' !!}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="{{ mix('/js/default.js') }}"></script>
     <script src="{{ mix('/js/ajax-form.js') }}"></script>
     @yield('script')

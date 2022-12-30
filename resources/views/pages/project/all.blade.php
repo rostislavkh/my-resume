@@ -10,7 +10,7 @@
     <div class="container-3">
         <div class="projects">
             @foreach ($projects as $project)
-                <div class="projects__item" data-aos="zoom-in-up" data-aos-delay="300">
+                <div class="projects__item">
                     <div class="img">
                         @if($project->attachment->first())
                             <img src="{{ $project->attachment->first()->url() }}" alt="img">

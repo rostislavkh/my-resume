@@ -15,7 +15,7 @@
 
 @section('content')
     <div class="container-2">
-        <div class="about-project" data-aos="fade-up" data-aos-delay="200">
+        <div class="about-project">
         @if($project->attachment->first())
             <div class="titule">
                 <img src="{{ $project->attachment->first()->url() }}" alt="img" />
@@ -59,7 +59,7 @@
             @endphp
             @foreach ($project->attachment as $img)
                 @if($i != 0)
-                    <img src="{{ $img->url() }}" data-aos="{{ $i % 2 === 0 ? 'fade-up-right' : 'fade-up-left' }}" data-aos-delay="200" alt="img" />
+                    <img src="{{ $img->url() }}" data-aos="{{ $i % 2 === 0 ? 'fade-up-right' : 'fade-up-left' }}" alt="img" />
                 @endif
                 @php
                     $i++;
