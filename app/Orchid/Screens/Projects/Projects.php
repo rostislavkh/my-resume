@@ -29,7 +29,7 @@ class Projects extends Screen
     public function query(): iterable
     {
         return [
-            'projects' => Project::orderBy('position')->get()
+            'projects' => Project::orderBy('position', 'desc')->get()
         ];
     }
 
