@@ -22,6 +22,7 @@ mix.js('resources/js/ajax-form.js', 'js');
 mix.copy('resources/js/libs/jquery.js', 'public/js');
 mix.copy('resources/js/libs/slick.js', 'public/js');
 mix.copy('resources/js/libs/animations.js', 'public/js');
+mix.copy('resources/js/libs/mask-input.js', 'public/js');
 
 // pages
 mix.js('resources/js/pages/home.js', 'js');

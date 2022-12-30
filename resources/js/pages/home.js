@@ -11,6 +11,11 @@ $(document).ready(() => {
         centerPadding: '0',
         pauseOnDotsHover: true
     });
+
+    const phone = document.querySelector("input[type='tel']");
+    if (phone) {
+        Inputmask({ "mask": "+380(99) 999-99-99" }).mask(phone);
+    }
 });
 
 $('.frame').hover(function (e) {

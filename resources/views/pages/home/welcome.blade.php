@@ -7,6 +7,7 @@
 @endsection
 
 @section('script')
+    <script src="{{ mix('js/mask-input.js') }}"></script>
     <script src="{{ mix('js/slick.js') }}"></script>
     <script src="{{ mix('js/home.js') }}"></script>
 @endsection
@@ -124,7 +125,7 @@
                     <label for="email">{{ __('Email *') }}</label>
                 </div>
                 <div class="input animated animated__fade-right">
-                    <input type="tel" name="phone" placeholder="placeholder">
+                    <input type="tel" name="phone" placeholder="placeholder" autocomplete="off">
                     <label for="phone">{{ __('Phone number') }}</label>
                 </div>
                 <div class="input animated animated__fade-left">
