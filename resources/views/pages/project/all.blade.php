@@ -10,7 +10,7 @@
     <div class="container-3">
         <div class="projects">
             @foreach ($projects as $project)
-                <div class="projects__item" data-aos="zoom-in-up">
+                <a href="{{ route('project', ['project' => $project->slug]) }}" class="projects__item" data-aos="zoom-in-up">
                     <div class="img">
                         @if($project->attachment->first())
                             <img src="{{ $project->attachment->first()->url() }}" alt="img">
@@ -18,8 +18,8 @@
                         <span class="title" style="color: {{ $project->text_color }};">{{ $project->getTranslate('name') }}</span>
                     </div>
                     <div class="text">{{ $project->getTranslate('short_desc') }}...</div>
-                    <a href="{{ route('project', ['project' => $project->slug]) }}" class="more-link">{{ __('More') }}</a>
-                </div>
+                    <button type="button" class="more-link">{{ __('More') }}</button>
+                </a>
             @endforeach
         </div>
         {{ $projects->links('custom-paginate') }}

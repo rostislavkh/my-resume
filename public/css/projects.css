@@ -83,6 +83,7 @@
   font-family: "Inter-Regular";
   padding: 6px 62px;
   border: 1px solid #7B7B7B;
+  background-color: #FBFBFB;
   border-radius: 10px 0 10px 0;
   margin: 5px auto 20px auto;
   display: block;
@@ -92,6 +93,7 @@
   transition: 0.3s;
 }
 .projects__item .more-link:hover {
+  cursor: pointer;
   color: #FBFBFB;
   background-color: #7B7B7B;
   border-color: #FBFBFB;

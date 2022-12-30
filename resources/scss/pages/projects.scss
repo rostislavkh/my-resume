@@ -70,6 +70,7 @@
             font-family: $Ir;
             padding: 6px 62px;
             border: 1px solid $text-color;
+            background-color: $milk;
             border-radius: 10px 0 10px 0;
             margin: 5px auto 20px auto;
             display: block;
@@ -78,6 +79,7 @@
             transition: .3s;
 
             &:hover {
+                cursor: pointer;
                 color: $milk;
                 background-color: $text-color;
                 border-color: $milk;
