@@ -26,29 +26,36 @@ class ContactMe extends Controller
                 'msg' => $request->msg ? $request->msg : 'Без тексту'
             ]);
 
-            $updates = TelegramUpdates::create()
-                // (Optional). Get's the latest update. NOTE: All previous updates will be forgotten using this method.
-                // ->latest()
+            // $updates = TelegramUpdates::create()
+            //     // (Optional). Get's the latest update. NOTE: All previous updates will be forgotten using this method.
+            //     // ->latest()
 
-                // (Optional). Limit to 2 updates (By default, updates starting with the earliest unconfirmed update are returned).
-                ->limit(2)
+            //     // (Optional). Limit to 2 updates (By default, updates starting with the earliest unconfirmed update are returned).
+            //     ->limit(2)
 
-                // (Optional). Add more params to the request.
-                ->options([
-                    'timeout' => 0,
-                ])
-                ->get();
+            //     // (Optional). Add more params to the request.
+            //     ->options([
+            //         'timeout' => 0,
+            //     ])
+            //     ->get();
 
-            if ($updates['ok']) {
-                foreach ($updates['result'] as $update) {
-                    Notification::send($user, new ContactMeNotify($update['message']['chat']['id'], [
-                        'name' => $request->name,
-                        'email' => $request->email,
-                        'phone_number' => $request->phone ? $request->phone : 'Без телефону',
-                        'msg' => $request->msg ? $request->msg : 'Без тексту'
-                    ]));
-                }
-            }
+            // if ($updates['ok']) {
+            //     foreach ($updates['result'] as $update) {
+            //         Notification::send($user, new ContactMeNotify($update['message']['chat']['id'], [
+            //             'name' => $request->name,
+            //             'email' => $request->email,
+            //             'phone_number' => $request->phone ? $request->phone : 'Без телефону',
+            //             'msg' => $request->msg ? $request->msg : 'Без тексту'
+            //         ]));
+            //     }
+            // }
+
+            Notification::send($user, new ContactMeNotify(config('app.my_telegram_id'), [
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone_number' => $request->phone ? $request->phone : 'Без телефону',
+                'msg' => $request->msg ? $request->msg : 'Без тексту'
+            ]));
         } catch (Exception $e) {
             return response()->json(false);
         }

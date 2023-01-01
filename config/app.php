@@ -212,4 +212,6 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'my_telegram_id' => env('TELEGRAM_ID')
+
 ];
