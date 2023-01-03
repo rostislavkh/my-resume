@@ -8,6 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <!-- SEO -->
+    <meta name="description" content="Resume by Rostislav Khorolskiy. Резюме Ростислава Хорольського">
+    <meta name="keywords" content="Resume, Rostislav, Khorolskiy, Резюме, Ростислав, Хорольський">
+    <meta name="author" content="Rostislav Khorolskiy">
+
     <title>@yield('title')</title>
 
     <!-- Fonts -->
@@ -77,7 +82,7 @@
     </main>
 
     <footer>
-        <a class="copyright link" href="{{ __('https://telegram.me/rkhorolkiy') }}">
+        <a class="copyright link" href="{{ __('https://t.me/rkhorolskiy') }}">
             {{ __('Copyright © Rostislav Khorolskiy 2022') }}
         </a>
     </footer>
