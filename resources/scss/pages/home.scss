@@ -5,6 +5,43 @@
     gap: 31px;
 }
 
+.pdf-cv {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: $blue-block;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: $default-shadow;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: flex-start;
+    transition: .3s;
+
+    span {
+        color: $subtitle-color;
+        size: $text-size;
+        font-family: $Ir;
+        white-space: nowrap;
+        opacity: 0;
+        transition: .3s;
+        width: 0;
+    }
+
+    &:hover {
+        gap: 5px;
+        transition: .3s;
+
+        span {
+            width: 115px;
+            opacity: 1;
+            transition: .3s;
+        }
+    }
+}
+
 .my-contacts {
     position: relative;
     max-width: 399px;

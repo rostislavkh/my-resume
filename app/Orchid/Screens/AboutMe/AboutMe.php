@@ -74,7 +74,8 @@ class AboutMe extends Screen
             Layout::columns([
                 Layout::rows([
                     Input::make('info.id')->hidden(),
-                    Upload::make('info.attachment')->maxFiles(1),
+                    Upload::make('info.attachment')->title('Avatar')->maxFiles(1),
+                    Upload::make('info.pdf_cv_id')->title('PDV CV')->maxFiles(1),
                     Group::make([
                         Quill::make('info.text')->rows(10)->title('Text'),
                         Quill::make('info.text_uk')->rows(10)->title('Text [Urkaine lang]')
@@ -89,9 +90,12 @@ class AboutMe extends Screen
 
         $info->load('attachment');
 
+        $pdf = Arr::get($request->info, 'pdf_cv_id', null);
+
         $info->update([
             'text' => Arr::get($request->info, 'text', null),
             'text_uk' => Arr::get($request->info, 'text_uk', null),
+            'pdf_cv_id' => $pdf ? $pdf[0] : null,
         ]);
 
         $info->attachment()->syncWithoutDetaching(

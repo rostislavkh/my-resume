@@ -14,8 +14,9 @@ class Home extends Controller
         $contacts = Contact::all();
         $skills = Skills::all();
         $about_me = AboutMe::first();
-        $avatar = $about_me-> attachment->first() ? $about_me->attachment->first()->url() : null;
+        $avatar = $about_me->attachment->first() ? $about_me->attachment->first()->url() : null;
         $projects = Project::where('is_view_top', true)->orderBy('position', 'desc')->get();
+        $pdf = $about_me->pdfCV?->url();
 
         if ($about_me == null) {
             $about_me = \App\Models\AboutMe::create([
@@ -28,7 +29,8 @@ class Home extends Controller
             'skills' => $skills,
             'about_me' => $about_me,
             'avatar' => $avatar,
-            'projects' => $projects
+            'projects' => $projects,
+            'pdf' => $pdf
         ]);
     }
 }

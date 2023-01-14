@@ -20,7 +20,8 @@ class AboutMe extends Model
 
     protected $fillable = [
         'text',
-        'text_uk'
+        'text_uk',
+        'pdf_cv_id'
     ];
 
     /**
@@ -48,4 +49,8 @@ class AboutMe extends Model
         'updated_at',
         'created_at'
     ];
+
+    public function pdfCV () {
+        return $this->hasOne(Attachment::class, 'id', 'pdf_cv_id')->withDefault();
+    }
 }
