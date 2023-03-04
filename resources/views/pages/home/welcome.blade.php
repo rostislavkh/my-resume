@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="container-2 gray-bg-container">
-        <div class="last-projects animated animated__fade-left">
+        <div class="last-projects">
             <span class="last-projects__title">{{ __('Last projects') }}</span>
             <div class="last-projects__slider-wrapper">
                 <svg class="custom-arrow prev-slide" width="70" height="70" viewBox="0 0 70 70" fill="none"
