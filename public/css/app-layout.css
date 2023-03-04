@@ -22,7 +22,7 @@ html, body {
 }
 
 body {
-  background-color: #F4FAFD;
+  background-color: #ffffff;
   padding-top: 67px;
   min-height: 100%;
   display: flex;
@@ -274,7 +274,7 @@ footer .copyright {
 }
 
 .swal2-styled.swal2-confirm {
-  background-color: #F5EDCE !important;
+  background-color: #f3f6fb !important;
   color: #717171 !important;
   font-family: "Inter-SemiBold" !important;
   font-size: 16px !important;
@@ -295,7 +295,7 @@ footer .copyright {
 }
 
 .swal2-popup {
-  background-color: #F5EDCE !important;
+  background-color: #f3f6fb !important;
 }
 
 .about-text p.ql-align-center {

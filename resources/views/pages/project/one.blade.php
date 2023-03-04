@@ -14,7 +14,7 @@
 
 
 @section('content')
-    <div class="container-2">
+    <div class="container-2 gray-bg-container">
         <div class="about-project" data-aos="zoom-in-down">
         @if($project->attachment->first())
             <div class="titule">
@@ -53,6 +53,8 @@
             <div class="about-project__text about-text">{!! $project->getTranslate('description') !!}</div>
         </div>
         <img class="scroll-img" src="/img/scroll.gif" />
+    </div>
+    <div class="container-2">
         <div class="images">
             @php
                 $i = 0;

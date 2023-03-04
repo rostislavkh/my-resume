@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="container-2 o-h">
+    <div class="container-2 gray-bg-container">
         <div class="last-projects animated animated__fade-left">
             <span class="last-projects__title">{{ __('Last projects') }}</span>
             <div class="last-projects__slider-wrapper">

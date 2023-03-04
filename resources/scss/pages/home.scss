@@ -48,7 +48,7 @@
     max-width: 399px;
     background-color: $blue-block;
     box-shadow: $default-shadow;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 87px 39px 36px 39px;
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@
     }
 
     &__title {
-        color: $subtitle-color;
+        color: $white-text-color;
         font-family: $Isb;
         font-size: $subtitle-size;
         margin-bottom: 17px;
@@ -105,7 +105,7 @@
     }
 
     &__list, &__list a {
-        color: $text-color;
+        color: $white-text-color;
         font-size: $text-size;
         font-family: $Ir;
     }
@@ -114,7 +114,7 @@
 .my-skills {
     background-color: $blue-block;
     box-shadow: $default-shadow;
-    border-radius: 10px;
+    border-radius: 20px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@
     &__title {
         font-size: $title-size;
         font-family: $Ib;
-        color: $title-color;
+        color: $white-text-color;
     }
 
     &__cards {
@@ -146,14 +146,14 @@
 
         &-title {
             font-size: $sub-subtitle-size;
-            color: $subtitle-color;
+            color: $white-text-color;
             font-family: $Isb;
         }
 
         
 
         li, li a {
-            color: $text-color;
+            color: $white-text-color;
             font-size: $text-size;
             font-family: $Ir;
         }
@@ -170,7 +170,7 @@
         .my-skills__subskill {
             font-size: $sub-subtitle-size;
             font-family: $Isb;
-            color: $sub-subtitle-color;
+            color: $white-text-color;
         }
     }
 }
@@ -178,7 +178,7 @@
 .about-me {
     background-color: $yellow-block;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 20px 20px 70px 20px;
     box-shadow: $default-shadow;
     display: flex;
     justify-content: center;
@@ -202,9 +202,6 @@
 }
 
 .last-projects {
-    background-color: $biege;
-    border-radius: 10px 10px;
-    box-shadow: $default-shadow;
     display: flex;
     flex-direction: column;
     padding-bottom: 29px;
@@ -520,7 +517,7 @@
                 transition: .3s;
                 background-color: $hover-color;
                 border-color: $title-color;
-                color: $title-color;
+                color: $white-text-color;
             }
         }
     }

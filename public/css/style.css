@@ -237,19 +237,25 @@ button {
   transition: 0.3s;
 }
 .pagination .pagination-list li.active span, .pagination .pagination-list li.active a {
-  color: #B0BFF7;
+  color: #4675eb;
 }
 .pagination .pagination-list li span:hover, .pagination .pagination-list li a:hover {
-  color: #B0BFF7;
+  color: #4675eb;
   transition: 0.3s;
 }
 .pagination .pagination-list .pagination-item span svg line, .pagination .pagination-list .pagination-item a svg line {
   transition: 0.3s;
 }
 .pagination .pagination-list .pagination-item:first-child:not(.disable):hover span svg line, .pagination .pagination-list .pagination-item:first-child:not(.disable):hover a svg line, .pagination .pagination-list .pagination-item:last-child:not(.disable):hover span svg line, .pagination .pagination-list .pagination-item:last-child:not(.disable):hover a svg line {
-  stroke: #B0BFF7;
+  stroke: #4675eb;
   transition: 0.3s;
 }
 .pagination .pagination-list .pagination-item.disable {
   opacity: 0.5;
+}
+
+.gray-bg-container {
+  background-color: #f3f6fb !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }

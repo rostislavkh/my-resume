@@ -100,10 +100,7 @@
 }
 
 .about-project {
-    background-color: $biege;
-    border-radius: 10px;
     padding: 10px;
-    box-shadow: $default-shadow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,6 +108,8 @@
     gap: 20px;
     margin-bottom: 10px;
     overflow-y: hidden;
+    max-width: 55%;
+    margin: auto;
 
     &__title {
         font-size: $title-size;
@@ -201,6 +200,12 @@
 
 
 
+
+@media screen and (max-width: 1680px) {
+    .about-project {
+        max-width: 970px;
+    }
+}
 
 @media screen and (max-width: 1308px) {
     .prev-slide {
