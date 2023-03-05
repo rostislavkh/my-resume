@@ -23,6 +23,7 @@ mix.copy('resources/js/libs/jquery.js', 'public/js');
 mix.copy('resources/js/libs/slick.js', 'public/js');
 mix.copy('resources/js/libs/animations.js', 'public/js');
 mix.copy('resources/js/libs/mask-input.js', 'public/js');
+mix.copy('resources/js/libs/lightbox.js', 'public/js');
 
 // pages
 mix.js('resources/js/pages/home.js', 'js');
@@ -42,6 +43,7 @@ mix.styles([
     'resources/scss/libs/drop.css',
     'resources/scss/libs/slick.css',
     'resources/scss/libs/anims.css',
+    'resources/scss/libs/lightbox.css',
 ], 'public/css/all-lib.css');
 
 // pages

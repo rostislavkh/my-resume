@@ -6,10 +6,9 @@
     <link href="{{ mix('/css/project.css') }}" rel="stylesheet">
 @endsection
 
-{{-- @section('script')
-    <script src="{{ mix('js/slick.js') }}"></script>
-    <script src="{{ mix('js/project.js') }}"></script>
-@endsection --}}
+@section('script')
+    <script src="{{ mix('js/lightbox.js') }}"></script>
+@endsection
 
 
 
@@ -17,9 +16,9 @@
     <div class="container-2 gray-bg-container">
         <div class="about-project" data-aos="zoom-in-down">
         @if($project->attachment->first())
-            <div class="titule">
+            <a href="{{ $project->attachment->first()->url() }}" data-lightbox="{{ $project->attachment->first()->url() }}" data-title="" class="titule">
                 <img src="{{ $project->attachment->first()->url() }}" alt="img" />
-            </div>
+            </a>
             {{-- <div class="wrapper" data-aos="fade-down" data-aos-delay="200">
                 <svg class="custom-arrow prev-slide" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M62.3021 29.4793H68.847C69.2711 29.4793 69.6154 29.1351 69.6154 28.711C69.6154 28.2869 69.2711 27.9426 68.847 27.9426H62.3021C61.878 27.9426 61.5338 28.2869 61.5338 28.711C61.5338 29.1351 61.878 29.4793 62.3021 29.4793Z" fill="#4B4B4B"/>
@@ -61,7 +60,9 @@
             @endphp
             @foreach ($project->attachment as $img)
                 @if($i != 0)
-                    <img src="{{ $img->url() }}" data-aos="{{ $i % 2 === 0 ? 'fade-up-right' : 'fade-up-left' }}" alt="img" />
+                    <a href="{{ $img->url() }}" data-lightbox="{{ $img->url() }}" data-title="">
+                        <img src="{{ $img->url() }}" data-aos="{{ $i % 2 === 0 ? 'fade-up-right' : 'fade-up-left' }}" alt="img" />
+                    </a>
                 @endif
                 @php
                     $i++;
