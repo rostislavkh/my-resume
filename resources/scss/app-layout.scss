@@ -261,10 +261,12 @@ header {
 
 main {
     flex: 1 1 auto;
+    background-image: url('/img/bg-img.png');
+    background-position: center;
+    padding-bottom: 35px;
 }
 
 footer {
-    margin-top: 35px;
     display: flex;
     justify-content: center;
     align-items: center;

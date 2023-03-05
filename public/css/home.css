@@ -25,7 +25,7 @@
   position: fixed;
   bottom: 74px;
   right: 10px;
-  background-color: #d6f1fe;
+  background-color: #f3f6fb;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -530,12 +530,12 @@
   .about-me {
     padding: 19px 19px 31px 19px;
   }
+  .my-contacts {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 380px) {
   .my-skills {
     padding: 21px 19px 36px 19px;
-  }
-  .my-contacts {
-    width: 100%;
   }
 }

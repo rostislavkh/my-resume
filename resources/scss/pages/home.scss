@@ -9,7 +9,7 @@
     position: fixed;
     bottom: 74px;
     right: 10px;
-    background-color: #d6f1fe;
+    background-color: $bg-gray;
     border-radius: 5px;
     padding: 10px;
     box-shadow: $default-shadow;
@@ -570,14 +570,14 @@
     .about-me {
         padding: 19px 19px 31px 19px;
     }
+
+    .my-contacts {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 380px) {
     .my-skills {
         padding: 21px 19px 36px 19px;
-    }
-
-    .my-contacts {
-        width: 100%;
     }
 }

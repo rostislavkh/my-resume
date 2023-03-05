@@ -3,10 +3,9 @@
     "/js/ajax-form.js": "/js/ajax-form.js?id=9742e26d23c6aeb9b22340d16ad07742",
     "/js/home.js": "/js/home.js?id=4e79839afff660e85f378f0d2687a170",
     "/js/project.js": "/js/project.js?id=83368d7ca274aaa00c3463e6cdb10cec",
-    "/css/home.css": "/css/home.css?id=3e6aea486b9cc0b589e66691140c5123",
+    "/css/home.css": "/css/home.css?id=95c9286979869f6b2de5aaf1b8b242c8",
     "/css/variables.css": "/css/variables.css?id=45a0a20940c1683fb7ef1584ba94c616",
     "/css/fonts.css": "/css/fonts.css?id=45a0a20940c1683fb7ef1584ba94c616",
-    "/css/app-layout.css": "/css/app-layout.css?id=aa922b1f465a79d3aef47172f26e65fc",
     "/css/style.css": "/css/style.css?id=a4ec8bd4ff4610c46a176b9e2dfa5edb",
     "/css/project.css": "/css/project.css?id=9d7cac2d088fa6de84f60cc8aaf38cc6",
     "/css/projects.css": "/css/projects.css?id=d9645c0b8183c9363e2fe91cf115ee30",
@@ -14,5 +13,6 @@
     "/js/slick.js": "/js/slick.js?id=db662f1499e90a76fd4de2fbc87250b3",
     "/js/animations.js": "/js/animations.js?id=07fbc56f7594b985e27766def2a6a379",
     "/js/mask-input.js": "/js/mask-input.js?id=bc95561640aa8e5bc196a2f8872d975c",
-    "/css/all-lib.css": "/css/all-lib.css?id=003b9415f8145cd52a84c972538314a0"
+    "/css/all-lib.css": "/css/all-lib.css?id=003b9415f8145cd52a84c972538314a0",
+    "/css/app-layout.css": "/css/app-layout.css?id=e2124f2a3ab546dc8d54d23e1ce89ebf"
 }
