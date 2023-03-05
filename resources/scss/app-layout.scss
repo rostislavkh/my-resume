@@ -204,7 +204,7 @@ header {
 .mobile-header__list {
     width: 100%;
     display: flex;
-    opacity: 0;
+    // opacity: 0;
     gap: 28px;
     padding-bottom: 28px;
     padding-top: 12px;
@@ -223,6 +223,7 @@ header {
         color: $text-color;
         font-family: $Ir;
         transition: .3s;
+        opacity: 0;
 
         &::after {
             position: absolute;
@@ -256,7 +257,11 @@ header {
 .mobile-header__list.open {
     top: 44px;
     transition: .3s;
-    opacity: 1;
+
+    & li a {
+        transition: .3s;
+        opacity: 1;
+    }
 }
 
 main {
